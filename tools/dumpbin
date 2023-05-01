@@ -1,0 +1,235 @@
+Microsoft (R) COFF/PE Dumper Version 14.28.29915.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file lib\dawn_proc.dll
+
+File Type: DLL
+
+  Section contains the following exports for dawn_proc.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+         207 number of functions
+         207 number of names
+
+    ordinal hint RVA      name
+
+          1    0 00004290 dawnProcSetPerThreadProcs
+          2    1 00001000 dawnProcSetProcs
+          3    2 0001F000 dawnThreadDispatchProcTable
+          4    3 00001030 wgpuAdapterCreateDevice
+          5    4 00001040 wgpuAdapterEnumerateFeatures
+          6    5 00001050 wgpuAdapterGetLimits
+          7    6 00001060 wgpuAdapterGetProperties
+          8    7 00001070 wgpuAdapterHasFeature
+          9    8 00001080 wgpuAdapterReference
+         10    9 00001090 wgpuAdapterRelease
+         11    A 000010A0 wgpuAdapterRequestDevice
+         12    B 000010B0 wgpuBindGroupLayoutReference
+         13    C 000010C0 wgpuBindGroupLayoutRelease
+         14    D 000010D0 wgpuBindGroupLayoutSetLabel
+         15    E 000010E0 wgpuBindGroupReference
+         16    F 000010F0 wgpuBindGroupRelease
+         17   10 00001100 wgpuBindGroupSetLabel
+         18   11 00001110 wgpuBufferDestroy
+         19   12 00001120 wgpuBufferGetConstMappedRange
+         20   13 00001130 wgpuBufferGetMappedRange
+         21   14 00001140 wgpuBufferGetSize
+         22   15 00001150 wgpuBufferGetUsage
+         23   16 00001160 wgpuBufferMapAsync
+         24   17 00001170 wgpuBufferReference
+         25   18 00001180 wgpuBufferRelease
+         26   19 00001190 wgpuBufferSetLabel
+         27   1A 000011A0 wgpuBufferUnmap
+         28   1B 000011B0 wgpuCommandBufferReference
+         29   1C 000011C0 wgpuCommandBufferRelease
+         30   1D 000011D0 wgpuCommandBufferSetLabel
+         31   1E 000011E0 wgpuCommandEncoderBeginComputePass
+         32   1F 000011F0 wgpuCommandEncoderBeginRenderPass
+         33   20 00001200 wgpuCommandEncoderClearBuffer
+         34   21 00001210 wgpuCommandEncoderCopyBufferToBuffer
+         35   22 00001220 wgpuCommandEncoderCopyBufferToTexture
+         36   23 00001230 wgpuCommandEncoderCopyTextureToBuffer
+         37   24 00001240 wgpuCommandEncoderCopyTextureToTexture
+         38   25 00001250 wgpuCommandEncoderCopyTextureToTextureInternal
+         39   26 00001260 wgpuCommandEncoderFinish
+         40   27 00001270 wgpuCommandEncoderInjectValidationError
+         41   28 00001280 wgpuCommandEncoderInsertDebugMarker
+         42   29 00001290 wgpuCommandEncoderPopDebugGroup
+         43   2A 000012A0 wgpuCommandEncoderPushDebugGroup
+         44   2B 000012B0 wgpuCommandEncoderReference
+         45   2C 000012C0 wgpuCommandEncoderRelease
+         46   2D 000012D0 wgpuCommandEncoderResolveQuerySet
+         47   2E 000012E0 wgpuCommandEncoderSetLabel
+         48   2F 000012F0 wgpuCommandEncoderWriteBuffer
+         49   30 00001300 wgpuCommandEncoderWriteTimestamp
+         50   31 00001310 wgpuComputePassEncoderDispatch
+         51   32 00001320 wgpuComputePassEncoderDispatchIndirect
+         52   33 00001330 wgpuComputePassEncoderDispatchWorkgroups
+         53   34 00001340 wgpuComputePassEncoderDispatchWorkgroupsIndirect
+         54   35 00001350 wgpuComputePassEncoderEnd
+         55   36 00001360 wgpuComputePassEncoderEndPass
+         56   37 00001370 wgpuComputePassEncoderInsertDebugMarker
+         57   38 00001380 wgpuComputePassEncoderPopDebugGroup
+         58   39 00001390 wgpuComputePassEncoderPushDebugGroup
+         59   3A 000013A0 wgpuComputePassEncoderReference
+         60   3B 000013B0 wgpuComputePassEncoderRelease
+         61   3C 000013C0 wgpuComputePassEncoderSetBindGroup
+         62   3D 000013D0 wgpuComputePassEncoderSetLabel
+         63   3E 000013E0 wgpuComputePassEncoderSetPipeline
+         64   3F 000013F0 wgpuComputePassEncoderWriteTimestamp
+         65   40 00001400 wgpuComputePipelineGetBindGroupLayout
+         66   41 00001410 wgpuComputePipelineReference
+         67   42 00001420 wgpuComputePipelineRelease
+         68   43 00001430 wgpuComputePipelineSetLabel
+         69   44 00001440 wgpuCreateInstance
+         70   45 00001450 wgpuDeviceCreateBindGroup
+         71   46 00001460 wgpuDeviceCreateBindGroupLayout
+         72   47 00001470 wgpuDeviceCreateBuffer
+         73   48 00001480 wgpuDeviceCreateCommandEncoder
+         74   49 00001490 wgpuDeviceCreateComputePipeline
+         75   4A 000014A0 wgpuDeviceCreateComputePipelineAsync
+         76   4B 000014B0 wgpuDeviceCreateErrorBuffer
+         77   4C 000014C0 wgpuDeviceCreateErrorExternalTexture
+         78   4D 000014D0 wgpuDeviceCreateErrorTexture
+         79   4E 000014E0 wgpuDeviceCreateExternalTexture
+         80   4F 000014F0 wgpuDeviceCreatePipelineLayout
+         81   50 00001500 wgpuDeviceCreateQuerySet
+         82   51 00001510 wgpuDeviceCreateRenderBundleEncoder
+         83   52 00001520 wgpuDeviceCreateRenderPipeline
+         84   53 00001530 wgpuDeviceCreateRenderPipelineAsync
+         85   54 00001540 wgpuDeviceCreateSampler
+         86   55 00001550 wgpuDeviceCreateShaderModule
+         87   56 00001560 wgpuDeviceCreateSwapChain
+         88   57 00001570 wgpuDeviceCreateTexture
+         89   58 00001580 wgpuDeviceDestroy
+         90   59 00001590 wgpuDeviceEnumerateFeatures
+         91   5A 000015A0 wgpuDeviceForceLoss
+         92   5B 000015B0 wgpuDeviceGetAdapter
+         93   5C 000015C0 wgpuDeviceGetLimits
+         94   5D 000015D0 wgpuDeviceGetQueue
+         95   5E 000015E0 wgpuDeviceHasFeature
+         96   5F 000015F0 wgpuDeviceInjectError
+         97   60 00001600 wgpuDevicePopErrorScope
+         98   61 00001610 wgpuDevicePushErrorScope
+         99   62 00001620 wgpuDeviceReference
+        100   63 00001630 wgpuDeviceRelease
+        101   64 00001640 wgpuDeviceSetDeviceLostCallback
+        102   65 00001650 wgpuDeviceSetLabel
+        103   66 00001660 wgpuDeviceSetLoggingCallback
+        104   67 00001670 wgpuDeviceSetUncapturedErrorCallback
+        105   68 00001680 wgpuDeviceTick
+        106   69 00001690 wgpuExternalTextureDestroy
+        107   6A 000016A0 wgpuExternalTextureReference
+        108   6B 000016B0 wgpuExternalTextureRelease
+        109   6C 000016C0 wgpuExternalTextureSetLabel
+        110   6D 000016D0 wgpuGetProcAddress
+        111   6E 000016E0 wgpuInstanceCreateSurface
+        112   6F 000016F0 wgpuInstanceReference
+        113   70 00001700 wgpuInstanceRelease
+        114   71 00001710 wgpuInstanceRequestAdapter
+        115   72 00001720 wgpuPipelineLayoutReference
+        116   73 00001730 wgpuPipelineLayoutRelease
+        117   74 00001740 wgpuPipelineLayoutSetLabel
+        118   75 00001750 wgpuQuerySetDestroy
+        119   76 00001760 wgpuQuerySetGetCount
+        120   77 00001770 wgpuQuerySetGetType
+        121   78 00001780 wgpuQuerySetReference
+        122   79 00001790 wgpuQuerySetRelease
+        123   7A 000017A0 wgpuQuerySetSetLabel
+        124   7B 000017B0 wgpuQueueCopyExternalTextureForBrowser
+        125   7C 000017C0 wgpuQueueCopyTextureForBrowser
+        126   7D 000017D0 wgpuQueueOnSubmittedWorkDone
+        127   7E 000017E0 wgpuQueueReference
+        128   7F 000017F0 wgpuQueueRelease
+        129   80 00001800 wgpuQueueSetLabel
+        130   81 00001810 wgpuQueueSubmit
+        131   82 00001820 wgpuQueueWriteBuffer
+        132   83 00001830 wgpuQueueWriteTexture
+        133   84 00001840 wgpuRenderBundleEncoderDraw
+        134   85 00001850 wgpuRenderBundleEncoderDrawIndexed
+        135   86 00001860 wgpuRenderBundleEncoderDrawIndexedIndirect
+        136   87 00001870 wgpuRenderBundleEncoderDrawIndirect
+        137   88 00001880 wgpuRenderBundleEncoderFinish
+        138   89 00001890 wgpuRenderBundleEncoderInsertDebugMarker
+        139   8A 000018A0 wgpuRenderBundleEncoderPopDebugGroup
+        140   8B 000018B0 wgpuRenderBundleEncoderPushDebugGroup
+        141   8C 000018C0 wgpuRenderBundleEncoderReference
+        142   8D 000018D0 wgpuRenderBundleEncoderRelease
+        143   8E 000018E0 wgpuRenderBundleEncoderSetBindGroup
+        144   8F 000018F0 wgpuRenderBundleEncoderSetIndexBuffer
+        145   90 00001900 wgpuRenderBundleEncoderSetLabel
+        146   91 00001910 wgpuRenderBundleEncoderSetPipeline
+        147   92 00001920 wgpuRenderBundleEncoderSetVertexBuffer
+        148   93 00001930 wgpuRenderBundleReference
+        149   94 00001940 wgpuRenderBundleRelease
+        150   95 00001950 wgpuRenderPassEncoderBeginOcclusionQuery
+        151   96 00001960 wgpuRenderPassEncoderDraw
+        152   97 00001970 wgpuRenderPassEncoderDrawIndexed
+        153   98 00001980 wgpuRenderPassEncoderDrawIndexedIndirect
+        154   99 00001990 wgpuRenderPassEncoderDrawIndirect
+        155   9A 000019A0 wgpuRenderPassEncoderEnd
+        156   9B 000019B0 wgpuRenderPassEncoderEndOcclusionQuery
+        157   9C 000019C0 wgpuRenderPassEncoderEndPass
+        158   9D 000019D0 wgpuRenderPassEncoderExecuteBundles
+        159   9E 000019E0 wgpuRenderPassEncoderInsertDebugMarker
+        160   9F 000019F0 wgpuRenderPassEncoderPopDebugGroup
+        161   A0 00001A00 wgpuRenderPassEncoderPushDebugGroup
+        162   A1 00001A10 wgpuRenderPassEncoderReference
+        163   A2 00001A20 wgpuRenderPassEncoderRelease
+        164   A3 00001A30 wgpuRenderPassEncoderSetBindGroup
+        165   A4 00001A40 wgpuRenderPassEncoderSetBlendConstant
+        166   A5 00001A50 wgpuRenderPassEncoderSetIndexBuffer
+        167   A6 00001A60 wgpuRenderPassEncoderSetLabel
+        168   A7 00001A70 wgpuRenderPassEncoderSetPipeline
+        169   A8 00001A80 wgpuRenderPassEncoderSetScissorRect
+        170   A9 00001A90 wgpuRenderPassEncoderSetStencilReference
+        171   AA 00001AA0 wgpuRenderPassEncoderSetVertexBuffer
+        172   AB 00001AB0 wgpuRenderPassEncoderSetViewport
+        173   AC 00001AC0 wgpuRenderPassEncoderWriteTimestamp
+        174   AD 00001AD0 wgpuRenderPipelineGetBindGroupLayout
+        175   AE 00001AE0 wgpuRenderPipelineReference
+        176   AF 00001AF0 wgpuRenderPipelineRelease
+        177   B0 00001B00 wgpuRenderPipelineSetLabel
+        178   B1 00001B10 wgpuSamplerReference
+        179   B2 00001B20 wgpuSamplerRelease
+        180   B3 00001B30 wgpuSamplerSetLabel
+        181   B4 00001B40 wgpuShaderModuleGetCompilationInfo
+        182   B5 00001B50 wgpuShaderModuleReference
+        183   B6 00001B60 wgpuShaderModuleRelease
+        184   B7 00001B70 wgpuShaderModuleSetLabel
+        185   B8 00001B80 wgpuSurfaceReference
+        186   B9 00001B90 wgpuSurfaceRelease
+        187   BA 00001BA0 wgpuSwapChainConfigure
+        188   BB 00001BB0 wgpuSwapChainGetCurrentTextureView
+        189   BC 00001BC0 wgpuSwapChainPresent
+        190   BD 00001BD0 wgpuSwapChainReference
+        191   BE 00001BE0 wgpuSwapChainRelease
+        192   BF 00001BF0 wgpuTextureCreateView
+        193   C0 00001C00 wgpuTextureDestroy
+        194   C1 00001C10 wgpuTextureGetDepthOrArrayLayers
+        195   C2 00001C20 wgpuTextureGetDimension
+        196   C3 00001C30 wgpuTextureGetFormat
+        197   C4 00001C40 wgpuTextureGetHeight
+        198   C5 00001C50 wgpuTextureGetMipLevelCount
+        199   C6 00001C60 wgpuTextureGetSampleCount
+        200   C7 00001C70 wgpuTextureGetUsage
+        201   C8 00001C80 wgpuTextureGetWidth
+        202   C9 00001C90 wgpuTextureReference
+        203   CA 00001CA0 wgpuTextureRelease
+        204   CB 00001CB0 wgpuTextureSetLabel
+        205   CC 00001CC0 wgpuTextureViewReference
+        206   CD 00001CD0 wgpuTextureViewRelease
+        207   CE 00001CE0 wgpuTextureViewSetLabel
+
+  Summary
+
+        4000 .data
+        2000 .pdata
+        D000 .rdata
+        1000 .reloc
+       11000 .text
+        1000 _RDATA
