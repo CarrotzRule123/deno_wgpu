@@ -100,7 +100,7 @@ type FunctionType = {
 enum ChunkType {
   Type,
   Enum,
-  Class,
+  Interface,
   Binding,
 }
 
@@ -113,7 +113,16 @@ type Chunk = {
 class Emitter {
   chunks: Chunk[] = [];
 
+  emitDefaults() {
+    this.chunks.push({
+      name: "GPUFlagsConstant",
+      type: ChunkType.Type,
+      chunks: ["export type GPUFlagsConstant = number;\n\n"],
+    });
+  }
+
   emitTree(ast: ASTTree) {
+    this.emitDefaults();
     for (const label in ast) {
       this.emitNode(label, ast[label]);
     }
@@ -127,12 +136,28 @@ class Emitter {
   }
 
   emitBitmask(label: string, node: Bitmask) {
+    if (label.split(" ").at(-1)! == "mask") {
+      label = label.split(" ").slice(0, -1).join(" ");
+    }
+    this.emitBitmaskType(label);
+    this.emitBitmaskInterface(label, node);
+  }
+
+  emitBitmaskType(label: string) {
     const chunks = [];
-    const type = ChunkType.Enum;
+    const type = ChunkType.Type;
+    const name = prefixGPU(pascalCase(label)) + "Flags";
+    chunks.push(`export type ${name}=number;\n\n`);
+    this.chunks.push({ name, type, chunks });
+  }
+
+  emitBitmaskInterface(label: string, node: Bitmask) {
+    const chunks = [];
+    const type = ChunkType.Interface;
     const name = prefixGPU(pascalCase(label));
-    chunks.push(`export enum ${name}{`);
+    chunks.push(`export interface ${name}{`);
     for (const value of node.values) {
-      chunks.push(`${pascalCase(value.name)}=${value.value},`);
+      chunks.push(`readonly ${snakeCase(value.name)}:GPUFlagsConstant;`);
     }
     chunks.push(`};\n\n`);
     this.chunks.push({ name, type, chunks });
@@ -159,6 +184,13 @@ function camelCase(str: string) {
   }).replace(/\s+/g, "");
 }
 
+function snakeCase(str: string) {
+  return str.replace(/\W+/g, " ")
+    .split(/ |\B(?=[A-Z])/)
+    .map((word) => word.toUpperCase())
+    .join("_");
+}
+
 async function run() {
   const ast = await (await fetch(import.meta.resolve("./dawn.json"))).json();
 
@@ -167,7 +199,7 @@ async function run() {
   emitter.emitTree(ast);
 
   const prefix = `// Do not modify this file!
-// This file was generated automatically using "tools/builder.ts"\n\n`;
+// This file was generated automatically using "tools/emitter.ts"\n\n`;
 
   let string = prefix + emitter.chunks.map((c) => c.chunks).flat().join("");
 

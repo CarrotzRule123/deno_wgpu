@@ -1,49 +1,61 @@
 // Do not modify this file!
-// This file was generated automatically using "tools/builder.ts"
+// This file was generated automatically using "tools/emitter.ts"
 
-export enum GPUBufferUsage {
-  None = 0,
-  MapRead = 1,
-  MapWrite = 2,
-  CopySrc = 4,
-  CopyDst = 8,
-  Index = 16,
-  Vertex = 32,
-  Uniform = 64,
-  Storage = 128,
-  Indirect = 256,
-  QueryResolve = 512,
+export type GPUFlagsConstant = number;
+
+export type GPUBufferUsageFlags = number;
+
+export interface GPUBufferUsage {
+  readonly NONE: GPUFlagsConstant;
+  readonly MAP_READ: GPUFlagsConstant;
+  readonly MAP_WRITE: GPUFlagsConstant;
+  readonly COPY_SRC: GPUFlagsConstant;
+  readonly COPY_DST: GPUFlagsConstant;
+  readonly INDEX: GPUFlagsConstant;
+  readonly VERTEX: GPUFlagsConstant;
+  readonly UNIFORM: GPUFlagsConstant;
+  readonly STORAGE: GPUFlagsConstant;
+  readonly INDIRECT: GPUFlagsConstant;
+  readonly QUERY_RESOLVE: GPUFlagsConstant;
 }
 
-export enum GPUColorWriteMask {
-  None = 0,
-  Red = 1,
-  Green = 2,
-  Blue = 4,
-  Alpha = 8,
-  All = 15,
+export type GPUColorWriteFlags = number;
+
+export interface GPUColorWrite {
+  readonly NONE: GPUFlagsConstant;
+  readonly RED: GPUFlagsConstant;
+  readonly GREEN: GPUFlagsConstant;
+  readonly BLUE: GPUFlagsConstant;
+  readonly ALPHA: GPUFlagsConstant;
+  readonly ALL: GPUFlagsConstant;
 }
 
-export enum GPUMapMode {
-  None = 0,
-  Read = 1,
-  Write = 2,
+export type GPUMapModeFlags = number;
+
+export interface GPUMapMode {
+  readonly NONE: GPUFlagsConstant;
+  readonly READ: GPUFlagsConstant;
+  readonly WRITE: GPUFlagsConstant;
 }
 
-export enum GPUShaderStage {
-  None = 0,
-  Vertex = 1,
-  Fragment = 2,
-  Compute = 4,
+export type GPUShaderStageFlags = number;
+
+export interface GPUShaderStage {
+  readonly NONE: GPUFlagsConstant;
+  readonly VERTEX: GPUFlagsConstant;
+  readonly FRAGMENT: GPUFlagsConstant;
+  readonly COMPUTE: GPUFlagsConstant;
 }
 
-export enum GPUTextureUsage {
-  None = 0,
-  CopySrc = 1,
-  CopyDst = 2,
-  TextureBinding = 4,
-  StorageBinding = 8,
-  RenderAttachment = 16,
-  Present = 32,
-  TransientAttachment = 64,
+export type GPUTextureUsageFlags = number;
+
+export interface GPUTextureUsage {
+  readonly NONE: GPUFlagsConstant;
+  readonly COPY_SRC: GPUFlagsConstant;
+  readonly COPY_DST: GPUFlagsConstant;
+  readonly TEXTURE_BINDING: GPUFlagsConstant;
+  readonly STORAGE_BINDING: GPUFlagsConstant;
+  readonly RENDER_ATTACHMENT: GPUFlagsConstant;
+  readonly PRESENT: GPUFlagsConstant;
+  readonly TRANSIENT_ATTACHMENT: GPUFlagsConstant;
 }
