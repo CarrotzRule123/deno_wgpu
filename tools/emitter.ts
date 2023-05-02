@@ -1,6 +1,12 @@
 import prettier from "https://esm.sh/prettier@2.8.8";
 import parser from "https://esm.sh/prettier@2.8.8/parser-typescript";
 
+// Fix differences between Dawn's and WebGPU's naming conventions
+const Fixer: { [label: string]: string } = {
+  "color write mask": "color write",
+  "alpha mode": "canvas alpha mode",
+};
+
 enum ASTType {
   TypeDef = "typedef",
   Enum = "enum",
@@ -32,15 +38,12 @@ type RecordMember = {
   optional?: boolean;
   default?: number | string;
   wire_is_data_only?: boolean;
-
-  jsType?: string;
-  jsName?: string;
 };
 
 type Value = {
   name: string;
   value: number;
-  jsrepr?: number;
+  jsrepr?: string;
   valid?: boolean;
 };
 
@@ -132,13 +135,12 @@ class Emitter {
     switch (node.category) {
       case ASTType.Bitmask:
         return this.emitBitmask(label, node);
+      case ASTType.Enum:
+        return this.emitEnum(label, node);
     }
   }
 
   emitBitmask(label: string, node: Bitmask) {
-    if (label.split(" ").at(-1)! == "mask") {
-      label = label.split(" ").slice(0, -1).join(" ");
-    }
     this.emitBitmaskType(label);
     this.emitBitmaskInterface(label, node);
   }
@@ -162,13 +164,30 @@ class Emitter {
     chunks.push(`};\n\n`);
     this.chunks.push({ name, type, chunks });
   }
+
+  emitEnum(label: string, node: Enum) {
+    if (!node.emscripten_no_enum_table) {
+      const chunks = [];
+      const type = ChunkType.Type;
+      const name = prefixGPU(pascalCase(label));
+      chunks.push(`export type ${name}=`);
+      for (const value of node.values) {
+        if (value.valid !== false) {
+          const member = value.jsrepr ? value.jsrepr.slice(1, -1) : value.name;
+          chunks.push(`|"${enumCase(member)}"`);
+        }
+      }
+      chunks.push(`;\n\n`);
+      this.chunks.push({ name, type, chunks });
+    }
+  }
 }
 
 function prefixGPU(str: string) {
   return "GPU" + str;
 }
 
-function prefixWgpu(str: string) {
+function _prefixWgpu(str: string) {
   return "wgpu" + str;
 }
 
@@ -178,7 +197,7 @@ function pascalCase(str: string) {
   }).replace(/\s+/g, "");
 }
 
-function camelCase(str: string) {
+function _camelCase(str: string) {
   return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
     return index === 0 ? word.toLowerCase() : word.toUpperCase();
   }).replace(/\s+/g, "");
@@ -191,12 +210,22 @@ function snakeCase(str: string) {
     .join("_");
 }
 
+function enumCase(str: string) {
+  return str.split(" ").reduce((a, b) =>
+    a + (isNaN(parseInt(a.at(-1)!)) ? "-" + b : b)
+  ).toLowerCase();
+}
+
 async function run() {
-  const ast = await (await fetch(import.meta.resolve("./dawn.json"))).json();
+  let json = await (await fetch(import.meta.resolve("./dawn.json"))).text();
+
+  for (const label in Fixer) {
+    json = json.replaceAll(label, Fixer[label]);
+  }
 
   const emitter = new Emitter();
 
-  emitter.emitTree(ast);
+  emitter.emitTree(JSON.parse(json));
 
   const prefix = `// Do not modify this file!
 // This file was generated automatically using "tools/emitter.ts"\n\n`;
