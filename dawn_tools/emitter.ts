@@ -166,6 +166,11 @@ class Emitter {
   }
 
   emitEnum(label: string, node: Enum) {
+    this.emitEnumType(label, node);
+    this.emitEnumMap(label, node);
+  }
+
+  emitEnumType(label: string, node: Enum) {
     if (!node.emscripten_no_enum_table) {
       const chunks = [];
       const type = ChunkType.Type;
@@ -178,6 +183,23 @@ class Emitter {
         }
       }
       chunks.push(`;\n\n`);
+      this.chunks.push({ name, type, chunks });
+    }
+  }
+
+  emitEnumMap(label: string, node: Enum) {
+    if (!node.emscripten_no_enum_table) {
+      const chunks = [];
+      const type = ChunkType.Type;
+      const name = prefixGPU(pascalCase(label));
+      chunks.push(`const ${name}={`);
+      for (const value of node.values) {
+        if (value.valid !== false) {
+          const member = value.jsrepr ? value.jsrepr.slice(1, -1) : value.name;
+          chunks.push(`"${enumCase(member)}": ${value.value},`);
+        }
+      }
+      chunks.push(`};\n\n`);
       this.chunks.push({ name, type, chunks });
     }
   }
@@ -232,7 +254,11 @@ async function run() {
 
   let string = prefix + emitter.chunks.map((c) => c.chunks).flat().join("");
 
-  string = prettier.format(string, { plugins: [parser], parser: "typescript" });
+  string = prettier.format(string, {
+    plugins: [parser],
+    parser: "typescript",
+    quoteProps: "preserve",
+  });
 
   Deno.writeFileSync("src/webgpu.ts", new TextEncoder().encode(string));
 }

@@ -5,12 +5,26 @@ export type GPUFlagsConstant = number;
 
 export type GPUAddressMode = "repeat" | "mirror-repeat" | "clamp-to-edge";
 
+const GPUAddressMode = { "repeat": 0, "mirror-repeat": 1, "clamp-to-edge": 2 };
+
 export type GPUBufferBindingType = "uniform" | "storage" | "read-only-storage";
+
+const GPUBufferBindingType = {
+  "uniform": 1,
+  "storage": 2,
+  "read-only-storage": 3,
+};
 
 export type GPUSamplerBindingType =
   | "filtering"
   | "non-filtering"
   | "comparison";
+
+const GPUSamplerBindingType = {
+  "filtering": 1,
+  "non-filtering": 2,
+  "comparison": 3,
+};
 
 export type GPUTextureSampleType =
   | "float"
@@ -19,7 +33,17 @@ export type GPUTextureSampleType =
   | "sint"
   | "uint";
 
+const GPUTextureSampleType = {
+  "float": 1,
+  "unfilterable-float": 2,
+  "depth": 3,
+  "sint": 4,
+  "uint": 5,
+};
+
 export type GPUStorageTextureAccess = "write-only";
+
+const GPUStorageTextureAccess = { "write-only": 1 };
 
 export type GPUBlendFactor =
   | "zero"
@@ -36,6 +60,22 @@ export type GPUBlendFactor =
   | "constant"
   | "one-minus-constant";
 
+const GPUBlendFactor = {
+  "zero": 0,
+  "one": 1,
+  "src": 2,
+  "one-minus-src": 3,
+  "src-alpha": 4,
+  "one-minus-src-alpha": 5,
+  "dst": 6,
+  "one-minus-dst": 7,
+  "dst-alpha": 8,
+  "one-minus-dst-alpha": 9,
+  "src-alpha-saturated": 10,
+  "constant": 11,
+  "one-minus-constant": 12,
+};
+
 export type GPUBlendOperation =
   | "add"
   | "subtract"
@@ -43,7 +83,17 @@ export type GPUBlendOperation =
   | "min"
   | "max";
 
+const GPUBlendOperation = {
+  "add": 0,
+  "subtract": 1,
+  "reverse-subtract": 2,
+  "min": 3,
+  "max": 4,
+};
+
 export type GPUBufferMapState = "unmapped" | "pending" | "mapped";
+
+const GPUBufferMapState = { "unmapped": 0, "pending": 1, "mapped": 2 };
 
 export type GPUBufferUsageFlags = number;
 
@@ -82,27 +132,66 @@ export type GPUCompareFunction =
   | "not-equal"
   | "always";
 
+const GPUCompareFunction = {
+  "never": 1,
+  "less": 2,
+  "less-equal": 3,
+  "greater": 4,
+  "greater-equal": 5,
+  "equal": 6,
+  "not-equal": 7,
+  "always": 8,
+};
+
 export type GPUCompilationInfoRequestStatus =
   | "success"
   | "error"
   | "device-lost"
   | "unknown";
 
+const GPUCompilationInfoRequestStatus = {
+  "success": 0,
+  "error": 1,
+  "device-lost": 2,
+  "unknown": 3,
+};
+
 export type GPUComputePassTimestampLocation = "beginning" | "end";
+
+const GPUComputePassTimestampLocation = { "beginning": 0, "end": 1 };
 
 export type GPUCanvasAlphaMode = "premultiplied" | "unpremultiplied" | "opaque";
 
+const GPUCanvasAlphaMode = {
+  "premultiplied": 0,
+  "unpremultiplied": 1,
+  "opaque": 2,
+};
+
 export type GPUCullMode = "none" | "front" | "back";
+
+const GPUCullMode = { "none": 0, "front": 1, "back": 2 };
 
 export type GPUErrorFilter = "validation" | "out-of-memory" | "internal";
 
+const GPUErrorFilter = { "validation": 0, "out-of-memory": 1, "internal": 2 };
+
 export type GPULoggingType = "verbose" | "info" | "warning" | "error";
+
+const GPULoggingType = { "verbose": 0, "info": 1, "warning": 2, "error": 3 };
 
 export type GPUExternalTextureRotation =
   | "rotate-0degrees"
   | "rotate-90degrees"
   | "rotate-180degrees"
   | "rotate-270degrees";
+
+const GPUExternalTextureRotation = {
+  "rotate-0degrees": 0,
+  "rotate-90degrees": 1,
+  "rotate-180degrees": 2,
+  "rotate-270degrees": 3,
+};
 
 export type GPUFeatureName =
   | "ndefine"
@@ -127,15 +216,49 @@ export type GPUFeatureName =
   | "surface-capabilities"
   | "transient-attachments";
 
+const GPUFeatureName = {
+  "ndefine": 0,
+  "depth-clip-control": 1,
+  "depth32float-stencil8": 2,
+  "timestamp-query": 3,
+  "pipeline-statistics-query": 4,
+  "texture-compression-bc": 5,
+  "texture-compression-etc2": 6,
+  "texture-compression-astc": 7,
+  "indirect-first-instance": 8,
+  "shader-f16": 9,
+  "rg11b10ufloat-renderable": 10,
+  "bgra8unorm-storage": 11,
+  "dawn-shader-float-16": 1001,
+  "dawn-internal-usages": 1002,
+  "dawn-multi-planar-formats": 1003,
+  "dawn-native": 1004,
+  "chromium-experimental-dp4a": 1005,
+  "timestamp-query-inside-passes": 1006,
+  "implicit-device-synchronization": 1007,
+  "surface-capabilities": 1008,
+  "transient-attachments": 1009,
+};
+
 export type GPUFilterMode = "nearest" | "linear";
+
+const GPUFilterMode = { "nearest": 0, "linear": 1 };
 
 export type GPUFrontFace = "ccw" | "cw";
 
+const GPUFrontFace = { "ccw": 0, "cw": 1 };
+
 export type GPUIndexFormat = "ndefine" | "uint16" | "uint32";
+
+const GPUIndexFormat = { "ndefine": 0, "uint16": 1, "uint32": 2 };
 
 export type GPUVertexStepMode = "vertex" | "instance" | "ndefine";
 
+const GPUVertexStepMode = { "vertex": 0, "instance": 1, "ndefine": 2 };
+
 export type GPULoadOp = "ndefine" | "clear" | "load";
+
+const GPULoadOp = { "ndefine": 0, "clear": 1, "load": 2 };
 
 export type GPUMapModeFlags = number;
 
@@ -147,7 +270,11 @@ export interface GPUMapMode {
 
 export type GPUMipmapFilterMode = "nearest" | "linear";
 
+const GPUMipmapFilterMode = { "nearest": 0, "linear": 1 };
+
 export type GPUStoreOp = "ndefine" | "store" | "discard";
+
+const GPUStoreOp = { "ndefine": 0, "store": 1, "discard": 2 };
 
 export type GPUPipelineStatisticName =
   | "vertex-shader-invocations"
@@ -156,7 +283,21 @@ export type GPUPipelineStatisticName =
   | "fragment-shader-invocations"
   | "compute-shader-invocations";
 
+const GPUPipelineStatisticName = {
+  "vertex-shader-invocations": 0,
+  "clipper-invocations": 1,
+  "clipper-primitives-out": 2,
+  "fragment-shader-invocations": 3,
+  "compute-shader-invocations": 4,
+};
+
 export type GPUPowerPreference = "ndefine" | "low-power" | "high-performance";
+
+const GPUPowerPreference = {
+  "ndefine": 0,
+  "low-power": 1,
+  "high-performance": 2,
+};
 
 export type GPUPrimitiveTopology =
   | "point-list"
@@ -165,9 +306,25 @@ export type GPUPrimitiveTopology =
   | "triangle-list"
   | "triangle-strip";
 
+const GPUPrimitiveTopology = {
+  "point-list": 0,
+  "line-list": 1,
+  "line-strip": 2,
+  "triangle-list": 3,
+  "triangle-strip": 4,
+};
+
 export type GPUQueryType = "occlusion" | "pipeline-statistics" | "timestamp";
 
+const GPUQueryType = {
+  "occlusion": 0,
+  "pipeline-statistics": 1,
+  "timestamp": 2,
+};
+
 export type GPURenderPassTimestampLocation = "beginning" | "end";
+
+const GPURenderPassTimestampLocation = { "beginning": 0, "end": 1 };
 
 export type GPUShaderStageFlags = number;
 
@@ -188,6 +345,17 @@ export type GPUStencilOperation =
   | "increment-wrap"
   | "decrement-wrap";
 
+const GPUStencilOperation = {
+  "keep": 0,
+  "zero": 1,
+  "replace": 2,
+  "invert": 3,
+  "increment-clamp": 4,
+  "decrement-clamp": 5,
+  "increment-wrap": 6,
+  "decrement-wrap": 7,
+};
+
 export type GPUTextureAspect =
   | "all"
   | "stencil-only"
@@ -195,13 +363,30 @@ export type GPUTextureAspect =
   | "plane-0only"
   | "plane-1only";
 
+const GPUTextureAspect = {
+  "all": 0,
+  "stencil-only": 1,
+  "depth-only": 2,
+  "plane-0only": 3,
+  "plane-1only": 4,
+};
+
 export type GPUTextureComponentType =
   | "float"
   | "sint"
   | "uint"
   | "depth-comparison";
 
+const GPUTextureComponentType = {
+  "float": 0,
+  "sint": 1,
+  "uint": 2,
+  "depth-comparison": 3,
+};
+
 export type GPUTextureDimension = "1d" | "2d" | "3d";
+
+const GPUTextureDimension = { "1d": 0, "2d": 1, "3d": 2 };
 
 export type GPUTextureFormat =
   | "r8unorm"
@@ -300,6 +485,104 @@ export type GPUTextureFormat =
   | "astc-12x12-unorm-srgb"
   | "r8bg8biplanar-420unorm";
 
+const GPUTextureFormat = {
+  "r8unorm": 1,
+  "r8snorm": 2,
+  "r8uint": 3,
+  "r8sint": 4,
+  "r16uint": 5,
+  "r16sint": 6,
+  "r16float": 7,
+  "rg8unorm": 8,
+  "rg8snorm": 9,
+  "rg8uint": 10,
+  "rg8sint": 11,
+  "r32float": 12,
+  "r32uint": 13,
+  "r32sint": 14,
+  "rg16uint": 15,
+  "rg16sint": 16,
+  "rg16float": 17,
+  "rgba8unorm": 18,
+  "rgba8unorm-srgb": 19,
+  "rgba8snorm": 20,
+  "rgba8uint": 21,
+  "rgba8sint": 22,
+  "bgra8unorm": 23,
+  "bgra8unorm-srgb": 24,
+  "rgb10a2unorm": 25,
+  "rg11b10ufloat": 26,
+  "rgb9e5ufloat": 27,
+  "rg32float": 28,
+  "rg32uint": 29,
+  "rg32sint": 30,
+  "rgba16uint": 31,
+  "rgba16sint": 32,
+  "rgba16float": 33,
+  "rgba32float": 34,
+  "rgba32uint": 35,
+  "rgba32sint": 36,
+  "stencil8": 37,
+  "depth16unorm": 38,
+  "depth24plus": 39,
+  "depth24plus-stencil8": 40,
+  "depth32float": 41,
+  "depth32float-stencil8": 42,
+  "bc1-rgba-unorm": 43,
+  "bc1-rgba-unorm-srgb": 44,
+  "bc2-rgba-unorm": 45,
+  "bc2-rgba-unorm-srgb": 46,
+  "bc3-rgba-unorm": 47,
+  "bc3-rgba-unorm-srgb": 48,
+  "bc4-r-unorm": 49,
+  "bc4-r-snorm": 50,
+  "bc5-rg-unorm": 51,
+  "bc5-rg-snorm": 52,
+  "bc6h-rgb-ufloat": 53,
+  "bc6h-rgb-float": 54,
+  "bc7-rgba-unorm": 55,
+  "bc7-rgba-unorm-srgb": 56,
+  "etc2-rgb8unorm": 57,
+  "etc2-rgb8unorm-srgb": 58,
+  "etc2-rgb8a1unorm": 59,
+  "etc2-rgb8a1unorm-srgb": 60,
+  "etc2-rgba8unorm": 61,
+  "etc2-rgba8unorm-srgb": 62,
+  "eac-r11unorm": 63,
+  "eac-r11snorm": 64,
+  "eac-rg11unorm": 65,
+  "eac-rg11snorm": 66,
+  "astc-4x4-unorm": 67,
+  "astc-4x4-unorm-srgb": 68,
+  "astc-5x4-unorm": 69,
+  "astc-5x4-unorm-srgb": 70,
+  "astc-5x5-unorm": 71,
+  "astc-5x5-unorm-srgb": 72,
+  "astc-6x5-unorm": 73,
+  "astc-6x5-unorm-srgb": 74,
+  "astc-6x6-unorm": 75,
+  "astc-6x6-unorm-srgb": 76,
+  "astc-8x5-unorm": 77,
+  "astc-8x5-unorm-srgb": 78,
+  "astc-8x6-unorm": 79,
+  "astc-8x6-unorm-srgb": 80,
+  "astc-8x8-unorm": 81,
+  "astc-8x8-unorm-srgb": 82,
+  "astc-10x5-unorm": 83,
+  "astc-10x5-unorm-srgb": 84,
+  "astc-10x6-unorm": 85,
+  "astc-10x6-unorm-srgb": 86,
+  "astc-10x8-unorm": 87,
+  "astc-10x8-unorm-srgb": 88,
+  "astc-10x10-unorm": 89,
+  "astc-10x10-unorm-srgb": 90,
+  "astc-12x10-unorm": 91,
+  "astc-12x10-unorm-srgb": 92,
+  "astc-12x12-unorm": 93,
+  "astc-12x12-unorm-srgb": 94,
+  "r8bg8biplanar-420unorm": 95,
+};
+
 export type GPUTextureUsageFlags = number;
 
 export interface GPUTextureUsage {
@@ -320,6 +603,15 @@ export type GPUTextureViewDimension =
   | "cube"
   | "cube-array"
   | "3d";
+
+const GPUTextureViewDimension = {
+  "1d": 1,
+  "2d": 2,
+  "2d-array": 3,
+  "cube": 4,
+  "cube-array": 5,
+  "3d": 6,
+};
 
 export type GPUVertexFormat =
   | "uint8x2"
@@ -352,3 +644,36 @@ export type GPUVertexFormat =
   | "sint32x2"
   | "sint32x3"
   | "sint32x4";
+
+const GPUVertexFormat = {
+  "uint8x2": 1,
+  "uint8x4": 2,
+  "sint8x2": 3,
+  "sint8x4": 4,
+  "unorm8x2": 5,
+  "unorm8x4": 6,
+  "snorm8x2": 7,
+  "snorm8x4": 8,
+  "uint16x2": 9,
+  "uint16x4": 10,
+  "sint16x2": 11,
+  "sint16x4": 12,
+  "unorm16x2": 13,
+  "unorm16x4": 14,
+  "snorm16x2": 15,
+  "snorm16x4": 16,
+  "float16x2": 17,
+  "float16x4": 18,
+  "float32": 19,
+  "float32x2": 20,
+  "float32x3": 21,
+  "float32x4": 22,
+  "uint32": 23,
+  "uint32x2": 24,
+  "uint32x3": 25,
+  "uint32x4": 26,
+  "sint32": 27,
+  "sint32x2": 28,
+  "sint32x3": 29,
+  "sint32x4": 30,
+};

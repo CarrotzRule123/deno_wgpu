@@ -1,0 +1,4230 @@
+{
+  "types": {
+    "WGPUFlags": ["uint32_t"],
+    "struct WGPUAdapterImpl": ["struct", "WGPUAdapterImpl"],
+    "WGPUAdapter": ["struct WGPUAdapterImpl", "*"],
+    "struct WGPUBindGroupImpl": ["struct", "WGPUBindGroupImpl"],
+    "WGPUBindGroup": ["struct WGPUBindGroupImpl", "*"],
+    "struct WGPUBindGroupLayoutImpl": ["struct", "WGPUBindGroupLayoutImpl"],
+    "WGPUBindGroupLayout": ["struct WGPUBindGroupLayoutImpl", "*"],
+    "struct WGPUBufferImpl": ["struct", "WGPUBufferImpl"],
+    "WGPUBuffer": ["struct WGPUBufferImpl", "*"],
+    "struct WGPUCommandBufferImpl": ["struct", "WGPUCommandBufferImpl"],
+    "WGPUCommandBuffer": ["struct WGPUCommandBufferImpl", "*"],
+    "struct WGPUCommandEncoderImpl": ["struct", "WGPUCommandEncoderImpl"],
+    "WGPUCommandEncoder": ["struct WGPUCommandEncoderImpl", "*"],
+    "struct WGPUComputePassEncoderImpl": [
+      "struct",
+      "WGPUComputePassEncoderImpl"
+    ],
+    "WGPUComputePassEncoder": ["struct WGPUComputePassEncoderImpl", "*"],
+    "struct WGPUComputePipelineImpl": ["struct", "WGPUComputePipelineImpl"],
+    "WGPUComputePipeline": ["struct WGPUComputePipelineImpl", "*"],
+    "struct WGPUDeviceImpl": ["struct", "WGPUDeviceImpl"],
+    "WGPUDevice": ["struct WGPUDeviceImpl", "*"],
+    "struct WGPUInstanceImpl": ["struct", "WGPUInstanceImpl"],
+    "WGPUInstance": ["struct WGPUInstanceImpl", "*"],
+    "struct WGPUPipelineLayoutImpl": ["struct", "WGPUPipelineLayoutImpl"],
+    "WGPUPipelineLayout": ["struct WGPUPipelineLayoutImpl", "*"],
+    "struct WGPUQuerySetImpl": ["struct", "WGPUQuerySetImpl"],
+    "WGPUQuerySet": ["struct WGPUQuerySetImpl", "*"],
+    "struct WGPUQueueImpl": ["struct", "WGPUQueueImpl"],
+    "WGPUQueue": ["struct WGPUQueueImpl", "*"],
+    "struct WGPURenderBundleImpl": ["struct", "WGPURenderBundleImpl"],
+    "WGPURenderBundle": ["struct WGPURenderBundleImpl", "*"],
+    "struct WGPURenderBundleEncoderImpl": [
+      "struct",
+      "WGPURenderBundleEncoderImpl"
+    ],
+    "WGPURenderBundleEncoder": ["struct WGPURenderBundleEncoderImpl", "*"],
+    "struct WGPURenderPassEncoderImpl": ["struct", "WGPURenderPassEncoderImpl"],
+    "WGPURenderPassEncoder": ["struct WGPURenderPassEncoderImpl", "*"],
+    "struct WGPURenderPipelineImpl": ["struct", "WGPURenderPipelineImpl"],
+    "WGPURenderPipeline": ["struct WGPURenderPipelineImpl", "*"],
+    "struct WGPUSamplerImpl": ["struct", "WGPUSamplerImpl"],
+    "WGPUSampler": ["struct WGPUSamplerImpl", "*"],
+    "struct WGPUShaderModuleImpl": ["struct", "WGPUShaderModuleImpl"],
+    "WGPUShaderModule": ["struct WGPUShaderModuleImpl", "*"],
+    "struct WGPUSurfaceImpl": ["struct", "WGPUSurfaceImpl"],
+    "WGPUSurface": ["struct WGPUSurfaceImpl", "*"],
+    "struct WGPUSwapChainImpl": ["struct", "WGPUSwapChainImpl"],
+    "WGPUSwapChain": ["struct WGPUSwapChainImpl", "*"],
+    "struct WGPUTextureImpl": ["struct", "WGPUTextureImpl"],
+    "WGPUTexture": ["struct WGPUTextureImpl", "*"],
+    "struct WGPUTextureViewImpl": ["struct", "WGPUTextureViewImpl"],
+    "WGPUTextureView": ["struct WGPUTextureViewImpl", "*"],
+    "enum WGPUAdapterType": ["enum", "WGPUAdapterType"],
+    "WGPUAdapterType": ["enum WGPUAdapterType"],
+    "enum WGPUAddressMode": ["enum", "WGPUAddressMode"],
+    "WGPUAddressMode": ["enum WGPUAddressMode"],
+    "enum WGPUBackendType": ["enum", "WGPUBackendType"],
+    "WGPUBackendType": ["enum WGPUBackendType"],
+    "enum WGPUBlendFactor": ["enum", "WGPUBlendFactor"],
+    "WGPUBlendFactor": ["enum WGPUBlendFactor"],
+    "enum WGPUBlendOperation": ["enum", "WGPUBlendOperation"],
+    "WGPUBlendOperation": ["enum WGPUBlendOperation"],
+    "enum WGPUBufferBindingType": ["enum", "WGPUBufferBindingType"],
+    "WGPUBufferBindingType": ["enum WGPUBufferBindingType"],
+    "enum WGPUBufferMapAsyncStatus": ["enum", "WGPUBufferMapAsyncStatus"],
+    "WGPUBufferMapAsyncStatus": ["enum WGPUBufferMapAsyncStatus"],
+    "enum WGPUBufferMapState": ["enum", "WGPUBufferMapState"],
+    "WGPUBufferMapState": ["enum WGPUBufferMapState"],
+    "enum WGPUCompareFunction": ["enum", "WGPUCompareFunction"],
+    "WGPUCompareFunction": ["enum WGPUCompareFunction"],
+    "enum WGPUCompilationInfoRequestStatus": [
+      "enum",
+      "WGPUCompilationInfoRequestStatus"
+    ],
+    "WGPUCompilationInfoRequestStatus": [
+      "enum WGPUCompilationInfoRequestStatus"
+    ],
+    "enum WGPUCompilationMessageType": ["enum", "WGPUCompilationMessageType"],
+    "WGPUCompilationMessageType": ["enum WGPUCompilationMessageType"],
+    "enum WGPUComputePassTimestampLocation": [
+      "enum",
+      "WGPUComputePassTimestampLocation"
+    ],
+    "WGPUComputePassTimestampLocation": [
+      "enum WGPUComputePassTimestampLocation"
+    ],
+    "enum WGPUCreatePipelineAsyncStatus": [
+      "enum",
+      "WGPUCreatePipelineAsyncStatus"
+    ],
+    "WGPUCreatePipelineAsyncStatus": ["enum WGPUCreatePipelineAsyncStatus"],
+    "enum WGPUCullMode": ["enum", "WGPUCullMode"],
+    "WGPUCullMode": ["enum WGPUCullMode"],
+    "enum WGPUDeviceLostReason": ["enum", "WGPUDeviceLostReason"],
+    "WGPUDeviceLostReason": ["enum WGPUDeviceLostReason"],
+    "enum WGPUErrorFilter": ["enum", "WGPUErrorFilter"],
+    "WGPUErrorFilter": ["enum WGPUErrorFilter"],
+    "enum WGPUErrorType": ["enum", "WGPUErrorType"],
+    "WGPUErrorType": ["enum WGPUErrorType"],
+    "enum WGPUFeatureName": ["enum", "WGPUFeatureName"],
+    "WGPUFeatureName": ["enum WGPUFeatureName"],
+    "enum WGPUFilterMode": ["enum", "WGPUFilterMode"],
+    "WGPUFilterMode": ["enum WGPUFilterMode"],
+    "enum WGPUFrontFace": ["enum", "WGPUFrontFace"],
+    "WGPUFrontFace": ["enum WGPUFrontFace"],
+    "enum WGPUIndexFormat": ["enum", "WGPUIndexFormat"],
+    "WGPUIndexFormat": ["enum WGPUIndexFormat"],
+    "enum WGPULoadOp": ["enum", "WGPULoadOp"],
+    "WGPULoadOp": ["enum WGPULoadOp"],
+    "enum WGPUMipmapFilterMode": ["enum", "WGPUMipmapFilterMode"],
+    "WGPUMipmapFilterMode": ["enum WGPUMipmapFilterMode"],
+    "enum WGPUPipelineStatisticName": ["enum", "WGPUPipelineStatisticName"],
+    "WGPUPipelineStatisticName": ["enum WGPUPipelineStatisticName"],
+    "enum WGPUPowerPreference": ["enum", "WGPUPowerPreference"],
+    "WGPUPowerPreference": ["enum WGPUPowerPreference"],
+    "enum WGPUPresentMode": ["enum", "WGPUPresentMode"],
+    "WGPUPresentMode": ["enum WGPUPresentMode"],
+    "enum WGPUPrimitiveTopology": ["enum", "WGPUPrimitiveTopology"],
+    "WGPUPrimitiveTopology": ["enum WGPUPrimitiveTopology"],
+    "enum WGPUQueryType": ["enum", "WGPUQueryType"],
+    "WGPUQueryType": ["enum WGPUQueryType"],
+    "enum WGPUQueueWorkDoneStatus": ["enum", "WGPUQueueWorkDoneStatus"],
+    "WGPUQueueWorkDoneStatus": ["enum WGPUQueueWorkDoneStatus"],
+    "enum WGPURenderPassTimestampLocation": [
+      "enum",
+      "WGPURenderPassTimestampLocation"
+    ],
+    "WGPURenderPassTimestampLocation": ["enum WGPURenderPassTimestampLocation"],
+    "enum WGPURequestAdapterStatus": ["enum", "WGPURequestAdapterStatus"],
+    "WGPURequestAdapterStatus": ["enum WGPURequestAdapterStatus"],
+    "enum WGPURequestDeviceStatus": ["enum", "WGPURequestDeviceStatus"],
+    "WGPURequestDeviceStatus": ["enum WGPURequestDeviceStatus"],
+    "enum WGPUSType": ["enum", "WGPUSType"],
+    "WGPUSType": ["enum WGPUSType"],
+    "enum WGPUSamplerBindingType": ["enum", "WGPUSamplerBindingType"],
+    "WGPUSamplerBindingType": ["enum WGPUSamplerBindingType"],
+    "enum WGPUStencilOperation": ["enum", "WGPUStencilOperation"],
+    "WGPUStencilOperation": ["enum WGPUStencilOperation"],
+    "enum WGPUStorageTextureAccess": ["enum", "WGPUStorageTextureAccess"],
+    "WGPUStorageTextureAccess": ["enum WGPUStorageTextureAccess"],
+    "enum WGPUStoreOp": ["enum", "WGPUStoreOp"],
+    "WGPUStoreOp": ["enum WGPUStoreOp"],
+    "enum WGPUTextureAspect": ["enum", "WGPUTextureAspect"],
+    "WGPUTextureAspect": ["enum WGPUTextureAspect"],
+    "enum WGPUTextureComponentType": ["enum", "WGPUTextureComponentType"],
+    "WGPUTextureComponentType": ["enum WGPUTextureComponentType"],
+    "enum WGPUTextureDimension": ["enum", "WGPUTextureDimension"],
+    "WGPUTextureDimension": ["enum WGPUTextureDimension"],
+    "enum WGPUTextureFormat": ["enum", "WGPUTextureFormat"],
+    "WGPUTextureFormat": ["enum WGPUTextureFormat"],
+    "enum WGPUTextureSampleType": ["enum", "WGPUTextureSampleType"],
+    "WGPUTextureSampleType": ["enum WGPUTextureSampleType"],
+    "enum WGPUTextureViewDimension": ["enum", "WGPUTextureViewDimension"],
+    "WGPUTextureViewDimension": ["enum WGPUTextureViewDimension"],
+    "enum WGPUVertexFormat": ["enum", "WGPUVertexFormat"],
+    "WGPUVertexFormat": ["enum WGPUVertexFormat"],
+    "enum WGPUVertexStepMode": ["enum", "WGPUVertexStepMode"],
+    "WGPUVertexStepMode": ["enum WGPUVertexStepMode"],
+    "enum WGPUBufferUsage": ["enum", "WGPUBufferUsage"],
+    "WGPUBufferUsage": ["enum WGPUBufferUsage"],
+    "WGPUBufferUsageFlags": ["WGPUFlags"],
+    "enum WGPUColorWriteMask": ["enum", "WGPUColorWriteMask"],
+    "WGPUColorWriteMask": ["enum WGPUColorWriteMask"],
+    "WGPUColorWriteMaskFlags": ["WGPUFlags"],
+    "enum WGPUMapMode": ["enum", "WGPUMapMode"],
+    "WGPUMapMode": ["enum WGPUMapMode"],
+    "WGPUMapModeFlags": ["WGPUFlags"],
+    "enum WGPUShaderStage": ["enum", "WGPUShaderStage"],
+    "WGPUShaderStage": ["enum WGPUShaderStage"],
+    "WGPUShaderStageFlags": ["WGPUFlags"],
+    "enum WGPUTextureUsage": ["enum", "WGPUTextureUsage"],
+    "WGPUTextureUsage": ["enum WGPUTextureUsage"],
+    "WGPUTextureUsageFlags": ["WGPUFlags"],
+    "struct WGPUChainedStruct": ["struct", "WGPUChainedStruct"],
+    "WGPUChainedStruct": ["struct WGPUChainedStruct"],
+    "struct WGPUChainedStructOut": ["struct", "WGPUChainedStructOut"],
+    "WGPUChainedStructOut": ["struct WGPUChainedStructOut"],
+    "struct WGPUAdapterProperties": ["struct", "WGPUAdapterProperties"],
+    "WGPUAdapterProperties": ["struct WGPUAdapterProperties"],
+    "struct WGPUBindGroupEntry": ["struct", "WGPUBindGroupEntry"],
+    "WGPUBindGroupEntry": ["struct WGPUBindGroupEntry"],
+    "struct WGPUBlendComponent": ["struct", "WGPUBlendComponent"],
+    "WGPUBlendComponent": ["struct WGPUBlendComponent"],
+    "struct WGPUBufferBindingLayout": ["struct", "WGPUBufferBindingLayout"],
+    "WGPUBufferBindingLayout": ["struct WGPUBufferBindingLayout"],
+    "struct WGPUBufferDescriptor": ["struct", "WGPUBufferDescriptor"],
+    "WGPUBufferDescriptor": ["struct WGPUBufferDescriptor"],
+    "struct WGPUColor": ["struct", "WGPUColor"],
+    "WGPUColor": ["struct WGPUColor"],
+    "struct WGPUCommandBufferDescriptor": [
+      "struct",
+      "WGPUCommandBufferDescriptor"
+    ],
+    "WGPUCommandBufferDescriptor": ["struct WGPUCommandBufferDescriptor"],
+    "struct WGPUCommandEncoderDescriptor": [
+      "struct",
+      "WGPUCommandEncoderDescriptor"
+    ],
+    "WGPUCommandEncoderDescriptor": ["struct WGPUCommandEncoderDescriptor"],
+    "struct WGPUCompilationMessage": ["struct", "WGPUCompilationMessage"],
+    "WGPUCompilationMessage": ["struct WGPUCompilationMessage"],
+    "struct WGPUComputePassTimestampWrite": [
+      "struct",
+      "WGPUComputePassTimestampWrite"
+    ],
+    "WGPUComputePassTimestampWrite": ["struct WGPUComputePassTimestampWrite"],
+    "struct WGPUConstantEntry": ["struct", "WGPUConstantEntry"],
+    "WGPUConstantEntry": ["struct WGPUConstantEntry"],
+    "struct WGPUExtent3D": ["struct", "WGPUExtent3D"],
+    "WGPUExtent3D": ["struct WGPUExtent3D"],
+    "struct WGPUInstanceDescriptor": ["struct", "WGPUInstanceDescriptor"],
+    "WGPUInstanceDescriptor": ["struct WGPUInstanceDescriptor"],
+    "struct WGPULimits": ["struct", "WGPULimits"],
+    "WGPULimits": ["struct WGPULimits"],
+    "struct WGPUMultisampleState": ["struct", "WGPUMultisampleState"],
+    "WGPUMultisampleState": ["struct WGPUMultisampleState"],
+    "struct WGPUOrigin3D": ["struct", "WGPUOrigin3D"],
+    "WGPUOrigin3D": ["struct WGPUOrigin3D"],
+    "struct WGPUPipelineLayoutDescriptor": [
+      "struct",
+      "WGPUPipelineLayoutDescriptor"
+    ],
+    "WGPUPipelineLayoutDescriptor": ["struct WGPUPipelineLayoutDescriptor"],
+    "struct WGPUPrimitiveDepthClipControl": [
+      "struct",
+      "WGPUPrimitiveDepthClipControl"
+    ],
+    "WGPUPrimitiveDepthClipControl": ["struct WGPUPrimitiveDepthClipControl"],
+    "struct WGPUPrimitiveState": ["struct", "WGPUPrimitiveState"],
+    "WGPUPrimitiveState": ["struct WGPUPrimitiveState"],
+    "struct WGPUQuerySetDescriptor": ["struct", "WGPUQuerySetDescriptor"],
+    "WGPUQuerySetDescriptor": ["struct WGPUQuerySetDescriptor"],
+    "struct WGPUQueueDescriptor": ["struct", "WGPUQueueDescriptor"],
+    "WGPUQueueDescriptor": ["struct WGPUQueueDescriptor"],
+    "struct WGPURenderBundleDescriptor": [
+      "struct",
+      "WGPURenderBundleDescriptor"
+    ],
+    "WGPURenderBundleDescriptor": ["struct WGPURenderBundleDescriptor"],
+    "struct WGPURenderBundleEncoderDescriptor": [
+      "struct",
+      "WGPURenderBundleEncoderDescriptor"
+    ],
+    "WGPURenderBundleEncoderDescriptor": [
+      "struct WGPURenderBundleEncoderDescriptor"
+    ],
+    "struct WGPURenderPassDepthStencilAttachment": [
+      "struct",
+      "WGPURenderPassDepthStencilAttachment"
+    ],
+    "WGPURenderPassDepthStencilAttachment": [
+      "struct WGPURenderPassDepthStencilAttachment"
+    ],
+    "struct WGPURenderPassDescriptorMaxDrawCount": [
+      "struct",
+      "WGPURenderPassDescriptorMaxDrawCount"
+    ],
+    "WGPURenderPassDescriptorMaxDrawCount": [
+      "struct WGPURenderPassDescriptorMaxDrawCount"
+    ],
+    "struct WGPURenderPassTimestampWrite": [
+      "struct",
+      "WGPURenderPassTimestampWrite"
+    ],
+    "WGPURenderPassTimestampWrite": ["struct WGPURenderPassTimestampWrite"],
+    "struct WGPURequestAdapterOptions": ["struct", "WGPURequestAdapterOptions"],
+    "WGPURequestAdapterOptions": ["struct WGPURequestAdapterOptions"],
+    "struct WGPUSamplerBindingLayout": ["struct", "WGPUSamplerBindingLayout"],
+    "WGPUSamplerBindingLayout": ["struct WGPUSamplerBindingLayout"],
+    "struct WGPUSamplerDescriptor": ["struct", "WGPUSamplerDescriptor"],
+    "WGPUSamplerDescriptor": ["struct WGPUSamplerDescriptor"],
+    "struct WGPUShaderModuleCompilationHint": [
+      "struct",
+      "WGPUShaderModuleCompilationHint"
+    ],
+    "WGPUShaderModuleCompilationHint": [
+      "struct WGPUShaderModuleCompilationHint"
+    ],
+    "struct WGPUShaderModuleSPIRVDescriptor": [
+      "struct",
+      "WGPUShaderModuleSPIRVDescriptor"
+    ],
+    "WGPUShaderModuleSPIRVDescriptor": [
+      "struct WGPUShaderModuleSPIRVDescriptor"
+    ],
+    "struct WGPUShaderModuleWGSLDescriptor": [
+      "struct",
+      "WGPUShaderModuleWGSLDescriptor"
+    ],
+    "WGPUShaderModuleWGSLDescriptor": ["struct WGPUShaderModuleWGSLDescriptor"],
+    "struct WGPUStencilFaceState": ["struct", "WGPUStencilFaceState"],
+    "WGPUStencilFaceState": ["struct WGPUStencilFaceState"],
+    "struct WGPUStorageTextureBindingLayout": [
+      "struct",
+      "WGPUStorageTextureBindingLayout"
+    ],
+    "WGPUStorageTextureBindingLayout": [
+      "struct WGPUStorageTextureBindingLayout"
+    ],
+    "struct WGPUSurfaceDescriptor": ["struct", "WGPUSurfaceDescriptor"],
+    "WGPUSurfaceDescriptor": ["struct WGPUSurfaceDescriptor"],
+    "struct WGPUSurfaceDescriptorFromAndroidNativeWindow": [
+      "struct",
+      "WGPUSurfaceDescriptorFromAndroidNativeWindow"
+    ],
+    "WGPUSurfaceDescriptorFromAndroidNativeWindow": [
+      "struct WGPUSurfaceDescriptorFromAndroidNativeWindow"
+    ],
+    "struct WGPUSurfaceDescriptorFromCanvasHTMLSelector": [
+      "struct",
+      "WGPUSurfaceDescriptorFromCanvasHTMLSelector"
+    ],
+    "WGPUSurfaceDescriptorFromCanvasHTMLSelector": [
+      "struct WGPUSurfaceDescriptorFromCanvasHTMLSelector"
+    ],
+    "struct WGPUSurfaceDescriptorFromMetalLayer": [
+      "struct",
+      "WGPUSurfaceDescriptorFromMetalLayer"
+    ],
+    "WGPUSurfaceDescriptorFromMetalLayer": [
+      "struct WGPUSurfaceDescriptorFromMetalLayer"
+    ],
+    "struct WGPUSurfaceDescriptorFromWaylandSurface": [
+      "struct",
+      "WGPUSurfaceDescriptorFromWaylandSurface"
+    ],
+    "WGPUSurfaceDescriptorFromWaylandSurface": [
+      "struct WGPUSurfaceDescriptorFromWaylandSurface"
+    ],
+    "struct WGPUSurfaceDescriptorFromWindowsHWND": [
+      "struct",
+      "WGPUSurfaceDescriptorFromWindowsHWND"
+    ],
+    "WGPUSurfaceDescriptorFromWindowsHWND": [
+      "struct WGPUSurfaceDescriptorFromWindowsHWND"
+    ],
+    "struct WGPUSurfaceDescriptorFromXcbWindow": [
+      "struct",
+      "WGPUSurfaceDescriptorFromXcbWindow"
+    ],
+    "WGPUSurfaceDescriptorFromXcbWindow": [
+      "struct WGPUSurfaceDescriptorFromXcbWindow"
+    ],
+    "struct WGPUSurfaceDescriptorFromXlibWindow": [
+      "struct",
+      "WGPUSurfaceDescriptorFromXlibWindow"
+    ],
+    "WGPUSurfaceDescriptorFromXlibWindow": [
+      "struct WGPUSurfaceDescriptorFromXlibWindow"
+    ],
+    "struct WGPUSwapChainDescriptor": ["struct", "WGPUSwapChainDescriptor"],
+    "WGPUSwapChainDescriptor": ["struct WGPUSwapChainDescriptor"],
+    "struct WGPUTextureBindingLayout": ["struct", "WGPUTextureBindingLayout"],
+    "WGPUTextureBindingLayout": ["struct WGPUTextureBindingLayout"],
+    "struct WGPUTextureDataLayout": ["struct", "WGPUTextureDataLayout"],
+    "WGPUTextureDataLayout": ["struct WGPUTextureDataLayout"],
+    "struct WGPUTextureViewDescriptor": ["struct", "WGPUTextureViewDescriptor"],
+    "WGPUTextureViewDescriptor": ["struct WGPUTextureViewDescriptor"],
+    "struct WGPUVertexAttribute": ["struct", "WGPUVertexAttribute"],
+    "WGPUVertexAttribute": ["struct WGPUVertexAttribute"],
+    "struct WGPUBindGroupDescriptor": ["struct", "WGPUBindGroupDescriptor"],
+    "WGPUBindGroupDescriptor": ["struct WGPUBindGroupDescriptor"],
+    "struct WGPUBindGroupLayoutEntry": ["struct", "WGPUBindGroupLayoutEntry"],
+    "WGPUBindGroupLayoutEntry": ["struct WGPUBindGroupLayoutEntry"],
+    "struct WGPUBlendState": ["struct", "WGPUBlendState"],
+    "WGPUBlendState": ["struct WGPUBlendState"],
+    "struct WGPUCompilationInfo": ["struct", "WGPUCompilationInfo"],
+    "WGPUCompilationInfo": ["struct WGPUCompilationInfo"],
+    "struct WGPUComputePassDescriptor": ["struct", "WGPUComputePassDescriptor"],
+    "WGPUComputePassDescriptor": ["struct WGPUComputePassDescriptor"],
+    "struct WGPUDepthStencilState": ["struct", "WGPUDepthStencilState"],
+    "WGPUDepthStencilState": ["struct WGPUDepthStencilState"],
+    "struct WGPUImageCopyBuffer": ["struct", "WGPUImageCopyBuffer"],
+    "WGPUImageCopyBuffer": ["struct WGPUImageCopyBuffer"],
+    "struct WGPUImageCopyTexture": ["struct", "WGPUImageCopyTexture"],
+    "WGPUImageCopyTexture": ["struct WGPUImageCopyTexture"],
+    "struct WGPUProgrammableStageDescriptor": [
+      "struct",
+      "WGPUProgrammableStageDescriptor"
+    ],
+    "WGPUProgrammableStageDescriptor": [
+      "struct WGPUProgrammableStageDescriptor"
+    ],
+    "struct WGPURenderPassColorAttachment": [
+      "struct",
+      "WGPURenderPassColorAttachment"
+    ],
+    "WGPURenderPassColorAttachment": ["struct WGPURenderPassColorAttachment"],
+    "struct WGPURequiredLimits": ["struct", "WGPURequiredLimits"],
+    "WGPURequiredLimits": ["struct WGPURequiredLimits"],
+    "struct WGPUShaderModuleDescriptor": [
+      "struct",
+      "WGPUShaderModuleDescriptor"
+    ],
+    "WGPUShaderModuleDescriptor": ["struct WGPUShaderModuleDescriptor"],
+    "struct WGPUSupportedLimits": ["struct", "WGPUSupportedLimits"],
+    "WGPUSupportedLimits": ["struct WGPUSupportedLimits"],
+    "struct WGPUTextureDescriptor": ["struct", "WGPUTextureDescriptor"],
+    "WGPUTextureDescriptor": ["struct WGPUTextureDescriptor"],
+    "struct WGPUVertexBufferLayout": ["struct", "WGPUVertexBufferLayout"],
+    "WGPUVertexBufferLayout": ["struct WGPUVertexBufferLayout"],
+    "struct WGPUBindGroupLayoutDescriptor": [
+      "struct",
+      "WGPUBindGroupLayoutDescriptor"
+    ],
+    "WGPUBindGroupLayoutDescriptor": ["struct WGPUBindGroupLayoutDescriptor"],
+    "struct WGPUColorTargetState": ["struct", "WGPUColorTargetState"],
+    "WGPUColorTargetState": ["struct WGPUColorTargetState"],
+    "struct WGPUComputePipelineDescriptor": [
+      "struct",
+      "WGPUComputePipelineDescriptor"
+    ],
+    "WGPUComputePipelineDescriptor": ["struct WGPUComputePipelineDescriptor"],
+    "struct WGPUDeviceDescriptor": ["struct", "WGPUDeviceDescriptor"],
+    "WGPUDeviceDescriptor": ["struct WGPUDeviceDescriptor"],
+    "struct WGPURenderPassDescriptor": ["struct", "WGPURenderPassDescriptor"],
+    "WGPURenderPassDescriptor": ["struct WGPURenderPassDescriptor"],
+    "struct WGPUVertexState": ["struct", "WGPUVertexState"],
+    "WGPUVertexState": ["struct WGPUVertexState"],
+    "struct WGPUFragmentState": ["struct", "WGPUFragmentState"],
+    "WGPUFragmentState": ["struct WGPUFragmentState"],
+    "struct WGPURenderPipelineDescriptor": [
+      "struct",
+      "WGPURenderPipelineDescriptor"
+    ],
+    "WGPURenderPipelineDescriptor": ["struct WGPURenderPipelineDescriptor"],
+    "WGPUBufferMapCallback": [
+      "void",
+      [
+        ["status", ["WGPUBufferMapAsyncStatus"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUCompilationInfoCallback": [
+      "void",
+      [
+        ["status", ["WGPUCompilationInfoRequestStatus"], null],
+        ["compilationInfo", ["WGPUCompilationInfo", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUCreateComputePipelineAsyncCallback": [
+      "void",
+      [
+        ["status", ["WGPUCreatePipelineAsyncStatus"], null],
+        ["pipeline", ["WGPUComputePipeline"], null],
+        ["message", ["char", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUCreateRenderPipelineAsyncCallback": [
+      "void",
+      [
+        ["status", ["WGPUCreatePipelineAsyncStatus"], null],
+        ["pipeline", ["WGPURenderPipeline"], null],
+        ["message", ["char", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUDeviceLostCallback": [
+      "void",
+      [
+        ["reason", ["WGPUDeviceLostReason"], null],
+        ["message", ["char", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUErrorCallback": [
+      "void",
+      [
+        ["type", ["WGPUErrorType"], null],
+        ["message", ["char", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProc": ["void", [[null, ["void"], null]], "*"],
+    "WGPUQueueWorkDoneCallback": [
+      "void",
+      [
+        ["status", ["WGPUQueueWorkDoneStatus"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPURequestAdapterCallback": [
+      "void",
+      [
+        ["status", ["WGPURequestAdapterStatus"], null],
+        ["adapter", ["WGPUAdapter"], null],
+        ["message", ["char", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPURequestDeviceCallback": [
+      "void",
+      [
+        ["status", ["WGPURequestDeviceStatus"], null],
+        ["device", ["WGPUDevice"], null],
+        ["message", ["char", "*"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCreateInstance": [
+      "WGPUInstance",
+      [["descriptor", ["WGPUInstanceDescriptor", "*"], null]],
+      "*"
+    ],
+    "WGPUProcGetProcAddress": [
+      "WGPUProc",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["procName", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcAdapterEnumerateFeatures": [
+      "size_t",
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["features", ["WGPUFeatureName", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcAdapterGetLimits": [
+      "bool",
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["limits", ["WGPUSupportedLimits", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcAdapterGetProperties": [
+      "void",
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["properties", ["WGPUAdapterProperties", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcAdapterHasFeature": [
+      "bool",
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["feature", ["WGPUFeatureName"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcAdapterRequestDevice": [
+      "void",
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["descriptor", ["WGPUDeviceDescriptor", "*"], null],
+        ["callback", ["WGPURequestDeviceCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBindGroupSetLabel": [
+      "void",
+      [
+        ["bindGroup", ["WGPUBindGroup"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBindGroupLayoutSetLabel": [
+      "void",
+      [
+        ["bindGroupLayout", ["WGPUBindGroupLayout"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBufferDestroy": ["void", [["buffer", ["WGPUBuffer"], null]], "*"],
+    "WGPUProcBufferGetConstMappedRange": [
+      "void",
+      "*",
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["size_t"], null],
+        ["size", ["size_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBufferGetMapState": [
+      "WGPUBufferMapState",
+      [["buffer", ["WGPUBuffer"], null]],
+      "*"
+    ],
+    "WGPUProcBufferGetMappedRange": [
+      "void",
+      "*",
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["size_t"], null],
+        ["size", ["size_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBufferGetSize": [
+      "uint64_t",
+      [["buffer", ["WGPUBuffer"], null]],
+      "*"
+    ],
+    "WGPUProcBufferGetUsage": [
+      "WGPUBufferUsage",
+      [["buffer", ["WGPUBuffer"], null]],
+      "*"
+    ],
+    "WGPUProcBufferMapAsync": [
+      "void",
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["mode", ["WGPUMapModeFlags"], null],
+        ["offset", ["size_t"], null],
+        ["size", ["size_t"], null],
+        ["callback", ["WGPUBufferMapCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBufferSetLabel": [
+      "void",
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcBufferUnmap": ["void", [["buffer", ["WGPUBuffer"], null]], "*"],
+    "WGPUProcCommandBufferSetLabel": [
+      "void",
+      [
+        ["commandBuffer", ["WGPUCommandBuffer"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderBeginComputePass": [
+      "WGPUComputePassEncoder",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["descriptor", ["WGPUComputePassDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderBeginRenderPass": [
+      "WGPURenderPassEncoder",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["descriptor", ["WGPURenderPassDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderClearBuffer": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderCopyBufferToBuffer": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUBuffer"], null],
+        ["sourceOffset", ["uint64_t"], null],
+        ["destination", ["WGPUBuffer"], null],
+        ["destinationOffset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderCopyBufferToTexture": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUImageCopyBuffer", "*"], null],
+        ["destination", ["WGPUImageCopyTexture", "*"], null],
+        ["copySize", ["WGPUExtent3D", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderCopyTextureToBuffer": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUImageCopyTexture", "*"], null],
+        ["destination", ["WGPUImageCopyBuffer", "*"], null],
+        ["copySize", ["WGPUExtent3D", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderCopyTextureToTexture": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUImageCopyTexture", "*"], null],
+        ["destination", ["WGPUImageCopyTexture", "*"], null],
+        ["copySize", ["WGPUExtent3D", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderFinish": [
+      "WGPUCommandBuffer",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["descriptor", ["WGPUCommandBufferDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderInsertDebugMarker": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderPopDebugGroup": [
+      "void",
+      [["commandEncoder", ["WGPUCommandEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcCommandEncoderPushDebugGroup": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderResolveQuerySet": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["firstQuery", ["uint32_t"], null],
+        ["queryCount", ["uint32_t"], null],
+        ["destination", ["WGPUBuffer"], null],
+        ["destinationOffset", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderSetLabel": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcCommandEncoderWriteTimestamp": [
+      "void",
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderBeginPipelineStatisticsQuery": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderDispatchWorkgroups": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["workgroupCountX", ["uint32_t"], null],
+        ["workgroupCountY", ["uint32_t"], null],
+        ["workgroupCountZ", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderDispatchWorkgroupsIndirect": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderEnd": [
+      "void",
+      [["computePassEncoder", ["WGPUComputePassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderEndPipelineStatisticsQuery": [
+      "void",
+      [["computePassEncoder", ["WGPUComputePassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderInsertDebugMarker": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderPopDebugGroup": [
+      "void",
+      [["computePassEncoder", ["WGPUComputePassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderPushDebugGroup": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderSetBindGroup": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["groupIndex", ["uint32_t"], null],
+        ["group", ["WGPUBindGroup"], null],
+        ["dynamicOffsetCount", ["uint32_t"], null],
+        ["dynamicOffsets", ["uint32_t", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderSetLabel": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePassEncoderSetPipeline": [
+      "void",
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["pipeline", ["WGPUComputePipeline"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePipelineGetBindGroupLayout": [
+      "WGPUBindGroupLayout",
+      [
+        ["computePipeline", ["WGPUComputePipeline"], null],
+        ["groupIndex", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcComputePipelineSetLabel": [
+      "void",
+      [
+        ["computePipeline", ["WGPUComputePipeline"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateBindGroup": [
+      "WGPUBindGroup",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUBindGroupDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateBindGroupLayout": [
+      "WGPUBindGroupLayout",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUBindGroupLayoutDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateBuffer": [
+      "WGPUBuffer",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUBufferDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateCommandEncoder": [
+      "WGPUCommandEncoder",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUCommandEncoderDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateComputePipeline": [
+      "WGPUComputePipeline",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUComputePipelineDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateComputePipelineAsync": [
+      "void",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUComputePipelineDescriptor", "*"], null],
+        ["callback", ["WGPUCreateComputePipelineAsyncCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreatePipelineLayout": [
+      "WGPUPipelineLayout",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUPipelineLayoutDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateQuerySet": [
+      "WGPUQuerySet",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUQuerySetDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateRenderBundleEncoder": [
+      "WGPURenderBundleEncoder",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPURenderBundleEncoderDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateRenderPipeline": [
+      "WGPURenderPipeline",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPURenderPipelineDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateRenderPipelineAsync": [
+      "void",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPURenderPipelineDescriptor", "*"], null],
+        ["callback", ["WGPUCreateRenderPipelineAsyncCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateSampler": [
+      "WGPUSampler",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUSamplerDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateShaderModule": [
+      "WGPUShaderModule",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUShaderModuleDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateSwapChain": [
+      "WGPUSwapChain",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["surface", ["WGPUSurface"], null],
+        ["descriptor", ["WGPUSwapChainDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceCreateTexture": [
+      "WGPUTexture",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUTextureDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceDestroy": ["void", [["device", ["WGPUDevice"], null]], "*"],
+    "WGPUProcDeviceEnumerateFeatures": [
+      "size_t",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["features", ["WGPUFeatureName", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceGetLimits": [
+      "bool",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["limits", ["WGPUSupportedLimits", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceGetQueue": [
+      "WGPUQueue",
+      [["device", ["WGPUDevice"], null]],
+      "*"
+    ],
+    "WGPUProcDeviceHasFeature": [
+      "bool",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["feature", ["WGPUFeatureName"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDevicePopErrorScope": [
+      "bool",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["callback", ["WGPUErrorCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDevicePushErrorScope": [
+      "void",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["filter", ["WGPUErrorFilter"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceSetDeviceLostCallback": [
+      "void",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["callback", ["WGPUDeviceLostCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceSetLabel": [
+      "void",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcDeviceSetUncapturedErrorCallback": [
+      "void",
+      [
+        ["device", ["WGPUDevice"], null],
+        ["callback", ["WGPUErrorCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcInstanceCreateSurface": [
+      "WGPUSurface",
+      [
+        ["instance", ["WGPUInstance"], null],
+        ["descriptor", ["WGPUSurfaceDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcInstanceProcessEvents": [
+      "void",
+      [["instance", ["WGPUInstance"], null]],
+      "*"
+    ],
+    "WGPUProcInstanceRequestAdapter": [
+      "void",
+      [
+        ["instance", ["WGPUInstance"], null],
+        ["options", ["WGPURequestAdapterOptions", "*"], null],
+        ["callback", ["WGPURequestAdapterCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcPipelineLayoutSetLabel": [
+      "void",
+      [
+        ["pipelineLayout", ["WGPUPipelineLayout"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcQuerySetDestroy": [
+      "void",
+      [["querySet", ["WGPUQuerySet"], null]],
+      "*"
+    ],
+    "WGPUProcQuerySetGetCount": [
+      "uint32_t",
+      [["querySet", ["WGPUQuerySet"], null]],
+      "*"
+    ],
+    "WGPUProcQuerySetGetType": [
+      "WGPUQueryType",
+      [["querySet", ["WGPUQuerySet"], null]],
+      "*"
+    ],
+    "WGPUProcQuerySetSetLabel": [
+      "void",
+      [
+        ["querySet", ["WGPUQuerySet"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcQueueOnSubmittedWorkDone": [
+      "void",
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["callback", ["WGPUQueueWorkDoneCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcQueueSetLabel": [
+      "void",
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcQueueSubmit": [
+      "void",
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["commandCount", ["uint32_t"], null],
+        ["commands", ["WGPUCommandBuffer", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcQueueWriteBuffer": [
+      "void",
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["bufferOffset", ["uint64_t"], null],
+        ["data", ["void", "*"], null],
+        ["size", ["size_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcQueueWriteTexture": [
+      "void",
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["destination", ["WGPUImageCopyTexture", "*"], null],
+        ["data", ["void", "*"], null],
+        ["dataSize", ["size_t"], null],
+        ["dataLayout", ["WGPUTextureDataLayout", "*"], null],
+        ["writeSize", ["WGPUExtent3D", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderDraw": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["vertexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstVertex", ["uint32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderDrawIndexed": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["indexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstIndex", ["uint32_t"], null],
+        ["baseVertex", ["int32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderDrawIndexedIndirect": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderDrawIndirect": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderFinish": [
+      "WGPURenderBundle",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["descriptor", ["WGPURenderBundleDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderInsertDebugMarker": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderPopDebugGroup": [
+      "void",
+      [["renderBundleEncoder", ["WGPURenderBundleEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderPushDebugGroup": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderSetBindGroup": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["groupIndex", ["uint32_t"], null],
+        ["group", ["WGPUBindGroup"], null],
+        ["dynamicOffsetCount", ["uint32_t"], null],
+        ["dynamicOffsets", ["uint32_t", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderSetIndexBuffer": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["format", ["WGPUIndexFormat"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderSetLabel": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderSetPipeline": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["pipeline", ["WGPURenderPipeline"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderBundleEncoderSetVertexBuffer": [
+      "void",
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["slot", ["uint32_t"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderBeginOcclusionQuery": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderBeginPipelineStatisticsQuery": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderDraw": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["vertexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstVertex", ["uint32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderDrawIndexed": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["indexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstIndex", ["uint32_t"], null],
+        ["baseVertex", ["int32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderDrawIndexedIndirect": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderDrawIndirect": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderEnd": [
+      "void",
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderEndOcclusionQuery": [
+      "void",
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderEndPipelineStatisticsQuery": [
+      "void",
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderExecuteBundles": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["bundleCount", ["uint32_t"], null],
+        ["bundles", ["WGPURenderBundle", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderInsertDebugMarker": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderPopDebugGroup": [
+      "void",
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderPushDebugGroup": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetBindGroup": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["groupIndex", ["uint32_t"], null],
+        ["group", ["WGPUBindGroup"], null],
+        ["dynamicOffsetCount", ["uint32_t"], null],
+        ["dynamicOffsets", ["uint32_t", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetBlendConstant": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["color", ["WGPUColor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetIndexBuffer": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["format", ["WGPUIndexFormat"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetLabel": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetPipeline": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["pipeline", ["WGPURenderPipeline"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetScissorRect": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["x", ["uint32_t"], null],
+        ["y", ["uint32_t"], null],
+        ["width", ["uint32_t"], null],
+        ["height", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetStencilReference": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["reference", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetVertexBuffer": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["slot", ["uint32_t"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPassEncoderSetViewport": [
+      "void",
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["x", ["float"], null],
+        ["y", ["float"], null],
+        ["width", ["float"], null],
+        ["height", ["float"], null],
+        ["minDepth", ["float"], null],
+        ["maxDepth", ["float"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPipelineGetBindGroupLayout": [
+      "WGPUBindGroupLayout",
+      [
+        ["renderPipeline", ["WGPURenderPipeline"], null],
+        ["groupIndex", ["uint32_t"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcRenderPipelineSetLabel": [
+      "void",
+      [
+        ["renderPipeline", ["WGPURenderPipeline"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcSamplerSetLabel": [
+      "void",
+      [
+        ["sampler", ["WGPUSampler"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcShaderModuleGetCompilationInfo": [
+      "void",
+      [
+        ["shaderModule", ["WGPUShaderModule"], null],
+        ["callback", ["WGPUCompilationInfoCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcShaderModuleSetLabel": [
+      "void",
+      [
+        ["shaderModule", ["WGPUShaderModule"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcSurfaceGetPreferredFormat": [
+      "WGPUTextureFormat",
+      [
+        ["surface", ["WGPUSurface"], null],
+        ["adapter", ["WGPUAdapter"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcSwapChainGetCurrentTextureView": [
+      "WGPUTextureView",
+      [["swapChain", ["WGPUSwapChain"], null]],
+      "*"
+    ],
+    "WGPUProcSwapChainPresent": [
+      "void",
+      [["swapChain", ["WGPUSwapChain"], null]],
+      "*"
+    ],
+    "WGPUProcTextureCreateView": [
+      "WGPUTextureView",
+      [
+        ["texture", ["WGPUTexture"], null],
+        ["descriptor", ["WGPUTextureViewDescriptor", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcTextureDestroy": [
+      "void",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetDepthOrArrayLayers": [
+      "uint32_t",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetDimension": [
+      "WGPUTextureDimension",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetFormat": [
+      "WGPUTextureFormat",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetHeight": [
+      "uint32_t",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetMipLevelCount": [
+      "uint32_t",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetSampleCount": [
+      "uint32_t",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetUsage": [
+      "WGPUTextureUsage",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureGetWidth": [
+      "uint32_t",
+      [["texture", ["WGPUTexture"], null]],
+      "*"
+    ],
+    "WGPUProcTextureSetLabel": [
+      "void",
+      [
+        ["texture", ["WGPUTexture"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ],
+    "WGPUProcTextureViewSetLabel": [
+      "void",
+      [
+        ["textureView", ["WGPUTextureView"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "*"
+    ]
+  },
+  "variables": {},
+  "fnmacros": {},
+  "macros": {
+    "WEBGPU_H_": "",
+    "WGPU_EXPORT": "",
+    "WGPU_ARRAY_LAYER_COUNT_UNDEFINED": "(0xffffffffUL)",
+    "WGPU_COPY_STRIDE_UNDEFINED": "(0xffffffffUL)",
+    "WGPU_LIMIT_U32_UNDEFINED": "(0xffffffffUL)",
+    "WGPU_LIMIT_U64_UNDEFINED": "(0xffffffffffffffffULL)",
+    "WGPU_MIP_LEVEL_COUNT_UNDEFINED": "(0xffffffffUL)",
+    "WGPU_WHOLE_MAP_SIZE": "SIZE_MAX",
+    "WGPU_WHOLE_SIZE": "(0xffffffffffffffffULL)"
+  },
+  "structs": {
+    "WGPUAdapterImpl": { "members": [], "pack": null },
+    "WGPUBindGroupImpl": { "members": [], "pack": null },
+    "WGPUBindGroupLayoutImpl": { "members": [], "pack": null },
+    "WGPUBufferImpl": { "members": [], "pack": null },
+    "WGPUCommandBufferImpl": { "members": [], "pack": null },
+    "WGPUCommandEncoderImpl": { "members": [], "pack": null },
+    "WGPUComputePassEncoderImpl": { "members": [], "pack": null },
+    "WGPUComputePipelineImpl": { "members": [], "pack": null },
+    "WGPUDeviceImpl": { "members": [], "pack": null },
+    "WGPUInstanceImpl": { "members": [], "pack": null },
+    "WGPUPipelineLayoutImpl": { "members": [], "pack": null },
+    "WGPUQuerySetImpl": { "members": [], "pack": null },
+    "WGPUQueueImpl": { "members": [], "pack": null },
+    "WGPURenderBundleImpl": { "members": [], "pack": null },
+    "WGPURenderBundleEncoderImpl": { "members": [], "pack": null },
+    "WGPURenderPassEncoderImpl": { "members": [], "pack": null },
+    "WGPURenderPipelineImpl": { "members": [], "pack": null },
+    "WGPUSamplerImpl": { "members": [], "pack": null },
+    "WGPUShaderModuleImpl": { "members": [], "pack": null },
+    "WGPUSurfaceImpl": { "members": [], "pack": null },
+    "WGPUSwapChainImpl": { "members": [], "pack": null },
+    "WGPUTextureImpl": { "members": [], "pack": null },
+    "WGPUTextureViewImpl": { "members": [], "pack": null },
+    "WGPUChainedStruct": {
+      "members": [
+        ["next", ["struct WGPUChainedStruct", "*"], null],
+        ["sType", ["WGPUSType"], null]
+      ],
+      "pack": null
+    },
+    "WGPUChainedStructOut": {
+      "members": [
+        ["next", ["struct WGPUChainedStructOut", "*"], null],
+        ["sType", ["WGPUSType"], null]
+      ],
+      "pack": null
+    },
+    "WGPUAdapterProperties": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStructOut", "*"], null],
+        ["vendorID", ["uint32_t"], null],
+        ["vendorName", ["char", "*"], null],
+        ["architecture", ["char", "*"], null],
+        ["deviceID", ["uint32_t"], null],
+        ["name", ["char", "*"], null],
+        ["driverDescription", ["char", "*"], null],
+        ["adapterType", ["WGPUAdapterType"], null],
+        ["backendType", ["WGPUBackendType"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBindGroupEntry": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["binding", ["uint32_t"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null],
+        ["sampler", ["WGPUSampler"], null],
+        ["textureView", ["WGPUTextureView"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBlendComponent": {
+      "members": [
+        ["operation", ["WGPUBlendOperation"], null],
+        ["srcFactor", ["WGPUBlendFactor"], null],
+        ["dstFactor", ["WGPUBlendFactor"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBufferBindingLayout": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["type", ["WGPUBufferBindingType"], null],
+        ["hasDynamicOffset", ["bool"], null],
+        ["minBindingSize", ["uint64_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBufferDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["usage", ["WGPUBufferUsageFlags"], null],
+        ["size", ["uint64_t"], null],
+        ["mappedAtCreation", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPUColor": {
+      "members": [
+        ["r", ["double"], null],
+        ["g", ["double"], null],
+        ["b", ["double"], null],
+        ["a", ["double"], null]
+      ],
+      "pack": null
+    },
+    "WGPUCommandBufferDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUCommandEncoderDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUCompilationMessage": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["message", ["char", "*"], null],
+        ["type", ["WGPUCompilationMessageType"], null],
+        ["lineNum", ["uint64_t"], null],
+        ["linePos", ["uint64_t"], null],
+        ["offset", ["uint64_t"], null],
+        ["length", ["uint64_t"], null],
+        ["utf16LinePos", ["uint64_t"], null],
+        ["utf16Offset", ["uint64_t"], null],
+        ["utf16Length", ["uint64_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUComputePassTimestampWrite": {
+      "members": [
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null],
+        ["location", ["WGPUComputePassTimestampLocation"], null]
+      ],
+      "pack": null
+    },
+    "WGPUConstantEntry": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["key", ["char", "*"], null],
+        ["value", ["double"], null]
+      ],
+      "pack": null
+    },
+    "WGPUExtent3D": {
+      "members": [
+        ["width", ["uint32_t"], null],
+        ["height", ["uint32_t"], null],
+        ["depthOrArrayLayers", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUInstanceDescriptor": {
+      "members": [["nextInChain", ["WGPUChainedStruct", "*"], null]],
+      "pack": null
+    },
+    "WGPULimits": {
+      "members": [
+        ["maxTextureDimension1D", ["uint32_t"], null],
+        ["maxTextureDimension2D", ["uint32_t"], null],
+        ["maxTextureDimension3D", ["uint32_t"], null],
+        ["maxTextureArrayLayers", ["uint32_t"], null],
+        ["maxBindGroups", ["uint32_t"], null],
+        ["maxBindingsPerBindGroup", ["uint32_t"], null],
+        ["maxDynamicUniformBuffersPerPipelineLayout", ["uint32_t"], null],
+        ["maxDynamicStorageBuffersPerPipelineLayout", ["uint32_t"], null],
+        ["maxSampledTexturesPerShaderStage", ["uint32_t"], null],
+        ["maxSamplersPerShaderStage", ["uint32_t"], null],
+        ["maxStorageBuffersPerShaderStage", ["uint32_t"], null],
+        ["maxStorageTexturesPerShaderStage", ["uint32_t"], null],
+        ["maxUniformBuffersPerShaderStage", ["uint32_t"], null],
+        ["maxUniformBufferBindingSize", ["uint64_t"], null],
+        ["maxStorageBufferBindingSize", ["uint64_t"], null],
+        ["minUniformBufferOffsetAlignment", ["uint32_t"], null],
+        ["minStorageBufferOffsetAlignment", ["uint32_t"], null],
+        ["maxVertexBuffers", ["uint32_t"], null],
+        ["maxBufferSize", ["uint64_t"], null],
+        ["maxVertexAttributes", ["uint32_t"], null],
+        ["maxVertexBufferArrayStride", ["uint32_t"], null],
+        ["maxInterStageShaderComponents", ["uint32_t"], null],
+        ["maxInterStageShaderVariables", ["uint32_t"], null],
+        ["maxColorAttachments", ["uint32_t"], null],
+        ["maxColorAttachmentBytesPerSample", ["uint32_t"], null],
+        ["maxComputeWorkgroupStorageSize", ["uint32_t"], null],
+        ["maxComputeInvocationsPerWorkgroup", ["uint32_t"], null],
+        ["maxComputeWorkgroupSizeX", ["uint32_t"], null],
+        ["maxComputeWorkgroupSizeY", ["uint32_t"], null],
+        ["maxComputeWorkgroupSizeZ", ["uint32_t"], null],
+        ["maxComputeWorkgroupsPerDimension", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUMultisampleState": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["count", ["uint32_t"], null],
+        ["mask", ["uint32_t"], null],
+        ["alphaToCoverageEnabled", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPUOrigin3D": {
+      "members": [
+        ["x", ["uint32_t"], null],
+        ["y", ["uint32_t"], null],
+        ["z", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUPipelineLayoutDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["bindGroupLayoutCount", ["uint32_t"], null],
+        ["bindGroupLayouts", ["WGPUBindGroupLayout", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUPrimitiveDepthClipControl": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["unclippedDepth", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPUPrimitiveState": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["topology", ["WGPUPrimitiveTopology"], null],
+        ["stripIndexFormat", ["WGPUIndexFormat"], null],
+        ["frontFace", ["WGPUFrontFace"], null],
+        ["cullMode", ["WGPUCullMode"], null]
+      ],
+      "pack": null
+    },
+    "WGPUQuerySetDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["type", ["WGPUQueryType"], null],
+        ["count", ["uint32_t"], null],
+        ["pipelineStatistics", ["WGPUPipelineStatisticName", "*"], null],
+        ["pipelineStatisticsCount", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUQueueDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderBundleDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderBundleEncoderDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["colorFormatsCount", ["uint32_t"], null],
+        ["colorFormats", ["WGPUTextureFormat", "*"], null],
+        ["depthStencilFormat", ["WGPUTextureFormat"], null],
+        ["sampleCount", ["uint32_t"], null],
+        ["depthReadOnly", ["bool"], null],
+        ["stencilReadOnly", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderPassDepthStencilAttachment": {
+      "members": [
+        ["view", ["WGPUTextureView"], null],
+        ["depthLoadOp", ["WGPULoadOp"], null],
+        ["depthStoreOp", ["WGPUStoreOp"], null],
+        ["depthClearValue", ["float"], null],
+        ["depthReadOnly", ["bool"], null],
+        ["stencilLoadOp", ["WGPULoadOp"], null],
+        ["stencilStoreOp", ["WGPUStoreOp"], null],
+        ["stencilClearValue", ["uint32_t"], null],
+        ["stencilReadOnly", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderPassDescriptorMaxDrawCount": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["maxDrawCount", ["uint64_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderPassTimestampWrite": {
+      "members": [
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null],
+        ["location", ["WGPURenderPassTimestampLocation"], null]
+      ],
+      "pack": null
+    },
+    "WGPURequestAdapterOptions": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["compatibleSurface", ["WGPUSurface"], null],
+        ["powerPreference", ["WGPUPowerPreference"], null],
+        ["forceFallbackAdapter", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSamplerBindingLayout": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["type", ["WGPUSamplerBindingType"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSamplerDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["addressModeU", ["WGPUAddressMode"], null],
+        ["addressModeV", ["WGPUAddressMode"], null],
+        ["addressModeW", ["WGPUAddressMode"], null],
+        ["magFilter", ["WGPUFilterMode"], null],
+        ["minFilter", ["WGPUFilterMode"], null],
+        ["mipmapFilter", ["WGPUMipmapFilterMode"], null],
+        ["lodMinClamp", ["float"], null],
+        ["lodMaxClamp", ["float"], null],
+        ["compare", ["WGPUCompareFunction"], null],
+        ["maxAnisotropy", ["uint16_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUShaderModuleCompilationHint": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["entryPoint", ["char", "*"], null],
+        ["layout", ["WGPUPipelineLayout"], null]
+      ],
+      "pack": null
+    },
+    "WGPUShaderModuleSPIRVDescriptor": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["codeSize", ["uint32_t"], null],
+        ["code", ["uint32_t", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUShaderModuleWGSLDescriptor": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["code", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUStencilFaceState": {
+      "members": [
+        ["compare", ["WGPUCompareFunction"], null],
+        ["failOp", ["WGPUStencilOperation"], null],
+        ["depthFailOp", ["WGPUStencilOperation"], null],
+        ["passOp", ["WGPUStencilOperation"], null]
+      ],
+      "pack": null
+    },
+    "WGPUStorageTextureBindingLayout": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["access", ["WGPUStorageTextureAccess"], null],
+        ["format", ["WGPUTextureFormat"], null],
+        ["viewDimension", ["WGPUTextureViewDimension"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromAndroidNativeWindow": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["window", ["void", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromCanvasHTMLSelector": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["selector", ["char", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromMetalLayer": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["layer", ["void", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromWaylandSurface": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["display", ["void", "*"], null],
+        ["surface", ["void", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromWindowsHWND": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["hinstance", ["void", "*"], null],
+        ["hwnd", ["void", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromXcbWindow": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["connection", ["void", "*"], null],
+        ["window", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSurfaceDescriptorFromXlibWindow": {
+      "members": [
+        ["chain", ["WGPUChainedStruct"], null],
+        ["display", ["void", "*"], null],
+        ["window", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSwapChainDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["usage", ["WGPUTextureUsageFlags"], null],
+        ["format", ["WGPUTextureFormat"], null],
+        ["width", ["uint32_t"], null],
+        ["height", ["uint32_t"], null],
+        ["presentMode", ["WGPUPresentMode"], null]
+      ],
+      "pack": null
+    },
+    "WGPUTextureBindingLayout": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["sampleType", ["WGPUTextureSampleType"], null],
+        ["viewDimension", ["WGPUTextureViewDimension"], null],
+        ["multisampled", ["bool"], null]
+      ],
+      "pack": null
+    },
+    "WGPUTextureDataLayout": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["offset", ["uint64_t"], null],
+        ["bytesPerRow", ["uint32_t"], null],
+        ["rowsPerImage", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUTextureViewDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["format", ["WGPUTextureFormat"], null],
+        ["dimension", ["WGPUTextureViewDimension"], null],
+        ["baseMipLevel", ["uint32_t"], null],
+        ["mipLevelCount", ["uint32_t"], null],
+        ["baseArrayLayer", ["uint32_t"], null],
+        ["arrayLayerCount", ["uint32_t"], null],
+        ["aspect", ["WGPUTextureAspect"], null]
+      ],
+      "pack": null
+    },
+    "WGPUVertexAttribute": {
+      "members": [
+        ["format", ["WGPUVertexFormat"], null],
+        ["offset", ["uint64_t"], null],
+        ["shaderLocation", ["uint32_t"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBindGroupDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["layout", ["WGPUBindGroupLayout"], null],
+        ["entryCount", ["uint32_t"], null],
+        ["entries", ["WGPUBindGroupEntry", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBindGroupLayoutEntry": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["binding", ["uint32_t"], null],
+        ["visibility", ["WGPUShaderStageFlags"], null],
+        ["buffer", ["WGPUBufferBindingLayout"], null],
+        ["sampler", ["WGPUSamplerBindingLayout"], null],
+        ["texture", ["WGPUTextureBindingLayout"], null],
+        ["storageTexture", ["WGPUStorageTextureBindingLayout"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBlendState": {
+      "members": [
+        ["color", ["WGPUBlendComponent"], null],
+        ["alpha", ["WGPUBlendComponent"], null]
+      ],
+      "pack": null
+    },
+    "WGPUCompilationInfo": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["messageCount", ["uint32_t"], null],
+        ["messages", ["WGPUCompilationMessage", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUComputePassDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["timestampWriteCount", ["uint32_t"], null],
+        ["timestampWrites", ["WGPUComputePassTimestampWrite", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUDepthStencilState": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["format", ["WGPUTextureFormat"], null],
+        ["depthWriteEnabled", ["bool"], null],
+        ["depthCompare", ["WGPUCompareFunction"], null],
+        ["stencilFront", ["WGPUStencilFaceState"], null],
+        ["stencilBack", ["WGPUStencilFaceState"], null],
+        ["stencilReadMask", ["uint32_t"], null],
+        ["stencilWriteMask", ["uint32_t"], null],
+        ["depthBias", ["int32_t"], null],
+        ["depthBiasSlopeScale", ["float"], null],
+        ["depthBiasClamp", ["float"], null]
+      ],
+      "pack": null
+    },
+    "WGPUImageCopyBuffer": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["layout", ["WGPUTextureDataLayout"], null],
+        ["buffer", ["WGPUBuffer"], null]
+      ],
+      "pack": null
+    },
+    "WGPUImageCopyTexture": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["texture", ["WGPUTexture"], null],
+        ["mipLevel", ["uint32_t"], null],
+        ["origin", ["WGPUOrigin3D"], null],
+        ["aspect", ["WGPUTextureAspect"], null]
+      ],
+      "pack": null
+    },
+    "WGPUProgrammableStageDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["module", ["WGPUShaderModule"], null],
+        ["entryPoint", ["char", "*"], null],
+        ["constantCount", ["uint32_t"], null],
+        ["constants", ["WGPUConstantEntry", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderPassColorAttachment": {
+      "members": [
+        ["view", ["WGPUTextureView"], null],
+        ["resolveTarget", ["WGPUTextureView"], null],
+        ["loadOp", ["WGPULoadOp"], null],
+        ["storeOp", ["WGPUStoreOp"], null],
+        ["clearValue", ["WGPUColor"], null]
+      ],
+      "pack": null
+    },
+    "WGPURequiredLimits": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["limits", ["WGPULimits"], null]
+      ],
+      "pack": null
+    },
+    "WGPUShaderModuleDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["hintCount", ["uint32_t"], null],
+        ["hints", ["WGPUShaderModuleCompilationHint", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUSupportedLimits": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStructOut", "*"], null],
+        ["limits", ["WGPULimits"], null]
+      ],
+      "pack": null
+    },
+    "WGPUTextureDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["usage", ["WGPUTextureUsageFlags"], null],
+        ["dimension", ["WGPUTextureDimension"], null],
+        ["size", ["WGPUExtent3D"], null],
+        ["format", ["WGPUTextureFormat"], null],
+        ["mipLevelCount", ["uint32_t"], null],
+        ["sampleCount", ["uint32_t"], null],
+        ["viewFormatCount", ["uint32_t"], null],
+        ["viewFormats", ["WGPUTextureFormat", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUVertexBufferLayout": {
+      "members": [
+        ["arrayStride", ["uint64_t"], null],
+        ["stepMode", ["WGPUVertexStepMode"], null],
+        ["attributeCount", ["uint32_t"], null],
+        ["attributes", ["WGPUVertexAttribute", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUBindGroupLayoutDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["entryCount", ["uint32_t"], null],
+        ["entries", ["WGPUBindGroupLayoutEntry", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUColorTargetState": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["format", ["WGPUTextureFormat"], null],
+        ["blend", ["WGPUBlendState", "*"], null],
+        ["writeMask", ["WGPUColorWriteMaskFlags"], null]
+      ],
+      "pack": null
+    },
+    "WGPUComputePipelineDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["layout", ["WGPUPipelineLayout"], null],
+        ["compute", ["WGPUProgrammableStageDescriptor"], null]
+      ],
+      "pack": null
+    },
+    "WGPUDeviceDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["requiredFeaturesCount", ["uint32_t"], null],
+        ["requiredFeatures", ["WGPUFeatureName", "*"], null],
+        ["requiredLimits", ["WGPURequiredLimits", "*"], null],
+        ["defaultQueue", ["WGPUQueueDescriptor"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderPassDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["colorAttachmentCount", ["uint32_t"], null],
+        ["colorAttachments", ["WGPURenderPassColorAttachment", "*"], null],
+        [
+          "depthStencilAttachment",
+          ["WGPURenderPassDepthStencilAttachment", "*"],
+          null
+        ],
+        ["occlusionQuerySet", ["WGPUQuerySet"], null],
+        ["timestampWriteCount", ["uint32_t"], null],
+        ["timestampWrites", ["WGPURenderPassTimestampWrite", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUVertexState": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["module", ["WGPUShaderModule"], null],
+        ["entryPoint", ["char", "*"], null],
+        ["constantCount", ["uint32_t"], null],
+        ["constants", ["WGPUConstantEntry", "*"], null],
+        ["bufferCount", ["uint32_t"], null],
+        ["buffers", ["WGPUVertexBufferLayout", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPUFragmentState": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["module", ["WGPUShaderModule"], null],
+        ["entryPoint", ["char", "*"], null],
+        ["constantCount", ["uint32_t"], null],
+        ["constants", ["WGPUConstantEntry", "*"], null],
+        ["targetCount", ["uint32_t"], null],
+        ["targets", ["WGPUColorTargetState", "*"], null]
+      ],
+      "pack": null
+    },
+    "WGPURenderPipelineDescriptor": {
+      "members": [
+        ["nextInChain", ["WGPUChainedStruct", "*"], null],
+        ["label", ["char", "*"], null],
+        ["layout", ["WGPUPipelineLayout"], null],
+        ["vertex", ["WGPUVertexState"], null],
+        ["primitive", ["WGPUPrimitiveState"], null],
+        ["depthStencil", ["WGPUDepthStencilState", "*"], null],
+        ["multisample", ["WGPUMultisampleState"], null],
+        ["fragment", ["WGPUFragmentState", "*"], null]
+      ],
+      "pack": null
+    }
+  },
+  "unions": {},
+  "enums": {
+    "WGPUAdapterType": {
+      "WGPUAdapterType_DiscreteGPU": 0,
+      "WGPUAdapterType_IntegratedGPU": 1,
+      "WGPUAdapterType_CPU": 2,
+      "WGPUAdapterType_Unknown": 3,
+      "WGPUAdapterType_Force32": 2147483647
+    },
+    "WGPUAddressMode": {
+      "WGPUAddressMode_Repeat": 0,
+      "WGPUAddressMode_MirrorRepeat": 1,
+      "WGPUAddressMode_ClampToEdge": 2,
+      "WGPUAddressMode_Force32": 2147483647
+    },
+    "WGPUBackendType": {
+      "WGPUBackendType_Null": 0,
+      "WGPUBackendType_WebGPU": 1,
+      "WGPUBackendType_D3D11": 2,
+      "WGPUBackendType_D3D12": 3,
+      "WGPUBackendType_Metal": 4,
+      "WGPUBackendType_Vulkan": 5,
+      "WGPUBackendType_OpenGL": 6,
+      "WGPUBackendType_OpenGLES": 7,
+      "WGPUBackendType_Force32": 2147483647
+    },
+    "WGPUBlendFactor": {
+      "WGPUBlendFactor_Zero": 0,
+      "WGPUBlendFactor_One": 1,
+      "WGPUBlendFactor_Src": 2,
+      "WGPUBlendFactor_OneMinusSrc": 3,
+      "WGPUBlendFactor_SrcAlpha": 4,
+      "WGPUBlendFactor_OneMinusSrcAlpha": 5,
+      "WGPUBlendFactor_Dst": 6,
+      "WGPUBlendFactor_OneMinusDst": 7,
+      "WGPUBlendFactor_DstAlpha": 8,
+      "WGPUBlendFactor_OneMinusDstAlpha": 9,
+      "WGPUBlendFactor_SrcAlphaSaturated": 10,
+      "WGPUBlendFactor_Constant": 11,
+      "WGPUBlendFactor_OneMinusConstant": 12,
+      "WGPUBlendFactor_Force32": 2147483647
+    },
+    "WGPUBlendOperation": {
+      "WGPUBlendOperation_Add": 0,
+      "WGPUBlendOperation_Subtract": 1,
+      "WGPUBlendOperation_ReverseSubtract": 2,
+      "WGPUBlendOperation_Min": 3,
+      "WGPUBlendOperation_Max": 4,
+      "WGPUBlendOperation_Force32": 2147483647
+    },
+    "WGPUBufferBindingType": {
+      "WGPUBufferBindingType_Undefined": 0,
+      "WGPUBufferBindingType_Uniform": 1,
+      "WGPUBufferBindingType_Storage": 2,
+      "WGPUBufferBindingType_ReadOnlyStorage": 3,
+      "WGPUBufferBindingType_Force32": 2147483647
+    },
+    "WGPUBufferMapAsyncStatus": {
+      "WGPUBufferMapAsyncStatus_Success": 0,
+      "WGPUBufferMapAsyncStatus_Error": 1,
+      "WGPUBufferMapAsyncStatus_Unknown": 2,
+      "WGPUBufferMapAsyncStatus_DeviceLost": 3,
+      "WGPUBufferMapAsyncStatus_DestroyedBeforeCallback": 4,
+      "WGPUBufferMapAsyncStatus_UnmappedBeforeCallback": 5,
+      "WGPUBufferMapAsyncStatus_Force32": 2147483647
+    },
+    "WGPUBufferMapState": {
+      "WGPUBufferMapState_Unmapped": 0,
+      "WGPUBufferMapState_Pending": 1,
+      "WGPUBufferMapState_Mapped": 2,
+      "WGPUBufferMapState_Force32": 2147483647
+    },
+    "WGPUCompareFunction": {
+      "WGPUCompareFunction_Undefined": 0,
+      "WGPUCompareFunction_Never": 1,
+      "WGPUCompareFunction_Less": 2,
+      "WGPUCompareFunction_LessEqual": 3,
+      "WGPUCompareFunction_Greater": 4,
+      "WGPUCompareFunction_GreaterEqual": 5,
+      "WGPUCompareFunction_Equal": 6,
+      "WGPUCompareFunction_NotEqual": 7,
+      "WGPUCompareFunction_Always": 8,
+      "WGPUCompareFunction_Force32": 2147483647
+    },
+    "WGPUCompilationInfoRequestStatus": {
+      "WGPUCompilationInfoRequestStatus_Success": 0,
+      "WGPUCompilationInfoRequestStatus_Error": 1,
+      "WGPUCompilationInfoRequestStatus_DeviceLost": 2,
+      "WGPUCompilationInfoRequestStatus_Unknown": 3,
+      "WGPUCompilationInfoRequestStatus_Force32": 2147483647
+    },
+    "WGPUCompilationMessageType": {
+      "WGPUCompilationMessageType_Error": 0,
+      "WGPUCompilationMessageType_Warning": 1,
+      "WGPUCompilationMessageType_Info": 2,
+      "WGPUCompilationMessageType_Force32": 2147483647
+    },
+    "WGPUComputePassTimestampLocation": {
+      "WGPUComputePassTimestampLocation_Beginning": 0,
+      "WGPUComputePassTimestampLocation_End": 1,
+      "WGPUComputePassTimestampLocation_Force32": 2147483647
+    },
+    "WGPUCreatePipelineAsyncStatus": {
+      "WGPUCreatePipelineAsyncStatus_Success": 0,
+      "WGPUCreatePipelineAsyncStatus_ValidationError": 1,
+      "WGPUCreatePipelineAsyncStatus_InternalError": 2,
+      "WGPUCreatePipelineAsyncStatus_DeviceLost": 3,
+      "WGPUCreatePipelineAsyncStatus_DeviceDestroyed": 4,
+      "WGPUCreatePipelineAsyncStatus_Unknown": 5,
+      "WGPUCreatePipelineAsyncStatus_Force32": 2147483647
+    },
+    "WGPUCullMode": {
+      "WGPUCullMode_None": 0,
+      "WGPUCullMode_Front": 1,
+      "WGPUCullMode_Back": 2,
+      "WGPUCullMode_Force32": 2147483647
+    },
+    "WGPUDeviceLostReason": {
+      "WGPUDeviceLostReason_Undefined": 0,
+      "WGPUDeviceLostReason_Destroyed": 1,
+      "WGPUDeviceLostReason_Force32": 2147483647
+    },
+    "WGPUErrorFilter": {
+      "WGPUErrorFilter_Validation": 0,
+      "WGPUErrorFilter_OutOfMemory": 1,
+      "WGPUErrorFilter_Internal": 2,
+      "WGPUErrorFilter_Force32": 2147483647
+    },
+    "WGPUErrorType": {
+      "WGPUErrorType_NoError": 0,
+      "WGPUErrorType_Validation": 1,
+      "WGPUErrorType_OutOfMemory": 2,
+      "WGPUErrorType_Internal": 3,
+      "WGPUErrorType_Unknown": 4,
+      "WGPUErrorType_DeviceLost": 5,
+      "WGPUErrorType_Force32": 2147483647
+    },
+    "WGPUFeatureName": {
+      "WGPUFeatureName_Undefined": 0,
+      "WGPUFeatureName_DepthClipControl": 1,
+      "WGPUFeatureName_Depth32FloatStencil8": 2,
+      "WGPUFeatureName_TimestampQuery": 3,
+      "WGPUFeatureName_PipelineStatisticsQuery": 4,
+      "WGPUFeatureName_TextureCompressionBC": 5,
+      "WGPUFeatureName_TextureCompressionETC2": 6,
+      "WGPUFeatureName_TextureCompressionASTC": 7,
+      "WGPUFeatureName_IndirectFirstInstance": 8,
+      "WGPUFeatureName_ShaderF16": 9,
+      "WGPUFeatureName_RG11B10UfloatRenderable": 10,
+      "WGPUFeatureName_BGRA8UnormStorage": 11,
+      "WGPUFeatureName_Force32": 2147483647
+    },
+    "WGPUFilterMode": {
+      "WGPUFilterMode_Nearest": 0,
+      "WGPUFilterMode_Linear": 1,
+      "WGPUFilterMode_Force32": 2147483647
+    },
+    "WGPUFrontFace": {
+      "WGPUFrontFace_CCW": 0,
+      "WGPUFrontFace_CW": 1,
+      "WGPUFrontFace_Force32": 2147483647
+    },
+    "WGPUIndexFormat": {
+      "WGPUIndexFormat_Undefined": 0,
+      "WGPUIndexFormat_Uint16": 1,
+      "WGPUIndexFormat_Uint32": 2,
+      "WGPUIndexFormat_Force32": 2147483647
+    },
+    "WGPULoadOp": {
+      "WGPULoadOp_Undefined": 0,
+      "WGPULoadOp_Clear": 1,
+      "WGPULoadOp_Load": 2,
+      "WGPULoadOp_Force32": 2147483647
+    },
+    "WGPUMipmapFilterMode": {
+      "WGPUMipmapFilterMode_Nearest": 0,
+      "WGPUMipmapFilterMode_Linear": 1,
+      "WGPUMipmapFilterMode_Force32": 2147483647
+    },
+    "WGPUPipelineStatisticName": {
+      "WGPUPipelineStatisticName_VertexShaderInvocations": 0,
+      "WGPUPipelineStatisticName_ClipperInvocations": 1,
+      "WGPUPipelineStatisticName_ClipperPrimitivesOut": 2,
+      "WGPUPipelineStatisticName_FragmentShaderInvocations": 3,
+      "WGPUPipelineStatisticName_ComputeShaderInvocations": 4,
+      "WGPUPipelineStatisticName_Force32": 2147483647
+    },
+    "WGPUPowerPreference": {
+      "WGPUPowerPreference_Undefined": 0,
+      "WGPUPowerPreference_LowPower": 1,
+      "WGPUPowerPreference_HighPerformance": 2,
+      "WGPUPowerPreference_Force32": 2147483647
+    },
+    "WGPUPresentMode": {
+      "WGPUPresentMode_Immediate": 0,
+      "WGPUPresentMode_Mailbox": 1,
+      "WGPUPresentMode_Fifo": 2,
+      "WGPUPresentMode_Force32": 2147483647
+    },
+    "WGPUPrimitiveTopology": {
+      "WGPUPrimitiveTopology_PointList": 0,
+      "WGPUPrimitiveTopology_LineList": 1,
+      "WGPUPrimitiveTopology_LineStrip": 2,
+      "WGPUPrimitiveTopology_TriangleList": 3,
+      "WGPUPrimitiveTopology_TriangleStrip": 4,
+      "WGPUPrimitiveTopology_Force32": 2147483647
+    },
+    "WGPUQueryType": {
+      "WGPUQueryType_Occlusion": 0,
+      "WGPUQueryType_PipelineStatistics": 1,
+      "WGPUQueryType_Timestamp": 2,
+      "WGPUQueryType_Force32": 2147483647
+    },
+    "WGPUQueueWorkDoneStatus": {
+      "WGPUQueueWorkDoneStatus_Success": 0,
+      "WGPUQueueWorkDoneStatus_Error": 1,
+      "WGPUQueueWorkDoneStatus_Unknown": 2,
+      "WGPUQueueWorkDoneStatus_DeviceLost": 3,
+      "WGPUQueueWorkDoneStatus_Force32": 2147483647
+    },
+    "WGPURenderPassTimestampLocation": {
+      "WGPURenderPassTimestampLocation_Beginning": 0,
+      "WGPURenderPassTimestampLocation_End": 1,
+      "WGPURenderPassTimestampLocation_Force32": 2147483647
+    },
+    "WGPURequestAdapterStatus": {
+      "WGPURequestAdapterStatus_Success": 0,
+      "WGPURequestAdapterStatus_Unavailable": 1,
+      "WGPURequestAdapterStatus_Error": 2,
+      "WGPURequestAdapterStatus_Unknown": 3,
+      "WGPURequestAdapterStatus_Force32": 2147483647
+    },
+    "WGPURequestDeviceStatus": {
+      "WGPURequestDeviceStatus_Success": 0,
+      "WGPURequestDeviceStatus_Error": 1,
+      "WGPURequestDeviceStatus_Unknown": 2,
+      "WGPURequestDeviceStatus_Force32": 2147483647
+    },
+    "WGPUSType": {
+      "WGPUSType_Invalid": 0,
+      "WGPUSType_SurfaceDescriptorFromMetalLayer": 1,
+      "WGPUSType_SurfaceDescriptorFromWindowsHWND": 2,
+      "WGPUSType_SurfaceDescriptorFromXlibWindow": 3,
+      "WGPUSType_SurfaceDescriptorFromCanvasHTMLSelector": 4,
+      "WGPUSType_ShaderModuleSPIRVDescriptor": 5,
+      "WGPUSType_ShaderModuleWGSLDescriptor": 6,
+      "WGPUSType_PrimitiveDepthClipControl": 7,
+      "WGPUSType_SurfaceDescriptorFromWaylandSurface": 8,
+      "WGPUSType_SurfaceDescriptorFromAndroidNativeWindow": 9,
+      "WGPUSType_SurfaceDescriptorFromXcbWindow": 10,
+      "WGPUSType_RenderPassDescriptorMaxDrawCount": 15,
+      "WGPUSType_Force32": 2147483647
+    },
+    "WGPUSamplerBindingType": {
+      "WGPUSamplerBindingType_Undefined": 0,
+      "WGPUSamplerBindingType_Filtering": 1,
+      "WGPUSamplerBindingType_NonFiltering": 2,
+      "WGPUSamplerBindingType_Comparison": 3,
+      "WGPUSamplerBindingType_Force32": 2147483647
+    },
+    "WGPUStencilOperation": {
+      "WGPUStencilOperation_Keep": 0,
+      "WGPUStencilOperation_Zero": 1,
+      "WGPUStencilOperation_Replace": 2,
+      "WGPUStencilOperation_Invert": 3,
+      "WGPUStencilOperation_IncrementClamp": 4,
+      "WGPUStencilOperation_DecrementClamp": 5,
+      "WGPUStencilOperation_IncrementWrap": 6,
+      "WGPUStencilOperation_DecrementWrap": 7,
+      "WGPUStencilOperation_Force32": 2147483647
+    },
+    "WGPUStorageTextureAccess": {
+      "WGPUStorageTextureAccess_Undefined": 0,
+      "WGPUStorageTextureAccess_WriteOnly": 1,
+      "WGPUStorageTextureAccess_Force32": 2147483647
+    },
+    "WGPUStoreOp": {
+      "WGPUStoreOp_Undefined": 0,
+      "WGPUStoreOp_Store": 1,
+      "WGPUStoreOp_Discard": 2,
+      "WGPUStoreOp_Force32": 2147483647
+    },
+    "WGPUTextureAspect": {
+      "WGPUTextureAspect_All": 0,
+      "WGPUTextureAspect_StencilOnly": 1,
+      "WGPUTextureAspect_DepthOnly": 2,
+      "WGPUTextureAspect_Force32": 2147483647
+    },
+    "WGPUTextureComponentType": {
+      "WGPUTextureComponentType_Float": 0,
+      "WGPUTextureComponentType_Sint": 1,
+      "WGPUTextureComponentType_Uint": 2,
+      "WGPUTextureComponentType_DepthComparison": 3,
+      "WGPUTextureComponentType_Force32": 2147483647
+    },
+    "WGPUTextureDimension": {
+      "WGPUTextureDimension_1D": 0,
+      "WGPUTextureDimension_2D": 1,
+      "WGPUTextureDimension_3D": 2,
+      "WGPUTextureDimension_Force32": 2147483647
+    },
+    "WGPUTextureFormat": {
+      "WGPUTextureFormat_Undefined": 0,
+      "WGPUTextureFormat_R8Unorm": 1,
+      "WGPUTextureFormat_R8Snorm": 2,
+      "WGPUTextureFormat_R8Uint": 3,
+      "WGPUTextureFormat_R8Sint": 4,
+      "WGPUTextureFormat_R16Uint": 5,
+      "WGPUTextureFormat_R16Sint": 6,
+      "WGPUTextureFormat_R16Float": 7,
+      "WGPUTextureFormat_RG8Unorm": 8,
+      "WGPUTextureFormat_RG8Snorm": 9,
+      "WGPUTextureFormat_RG8Uint": 10,
+      "WGPUTextureFormat_RG8Sint": 11,
+      "WGPUTextureFormat_R32Float": 12,
+      "WGPUTextureFormat_R32Uint": 13,
+      "WGPUTextureFormat_R32Sint": 14,
+      "WGPUTextureFormat_RG16Uint": 15,
+      "WGPUTextureFormat_RG16Sint": 16,
+      "WGPUTextureFormat_RG16Float": 17,
+      "WGPUTextureFormat_RGBA8Unorm": 18,
+      "WGPUTextureFormat_RGBA8UnormSrgb": 19,
+      "WGPUTextureFormat_RGBA8Snorm": 20,
+      "WGPUTextureFormat_RGBA8Uint": 21,
+      "WGPUTextureFormat_RGBA8Sint": 22,
+      "WGPUTextureFormat_BGRA8Unorm": 23,
+      "WGPUTextureFormat_BGRA8UnormSrgb": 24,
+      "WGPUTextureFormat_RGB10A2Unorm": 25,
+      "WGPUTextureFormat_RG11B10Ufloat": 26,
+      "WGPUTextureFormat_RGB9E5Ufloat": 27,
+      "WGPUTextureFormat_RG32Float": 28,
+      "WGPUTextureFormat_RG32Uint": 29,
+      "WGPUTextureFormat_RG32Sint": 30,
+      "WGPUTextureFormat_RGBA16Uint": 31,
+      "WGPUTextureFormat_RGBA16Sint": 32,
+      "WGPUTextureFormat_RGBA16Float": 33,
+      "WGPUTextureFormat_RGBA32Float": 34,
+      "WGPUTextureFormat_RGBA32Uint": 35,
+      "WGPUTextureFormat_RGBA32Sint": 36,
+      "WGPUTextureFormat_Stencil8": 37,
+      "WGPUTextureFormat_Depth16Unorm": 38,
+      "WGPUTextureFormat_Depth24Plus": 39,
+      "WGPUTextureFormat_Depth24PlusStencil8": 40,
+      "WGPUTextureFormat_Depth32Float": 41,
+      "WGPUTextureFormat_Depth32FloatStencil8": 42,
+      "WGPUTextureFormat_BC1RGBAUnorm": 43,
+      "WGPUTextureFormat_BC1RGBAUnormSrgb": 44,
+      "WGPUTextureFormat_BC2RGBAUnorm": 45,
+      "WGPUTextureFormat_BC2RGBAUnormSrgb": 46,
+      "WGPUTextureFormat_BC3RGBAUnorm": 47,
+      "WGPUTextureFormat_BC3RGBAUnormSrgb": 48,
+      "WGPUTextureFormat_BC4RUnorm": 49,
+      "WGPUTextureFormat_BC4RSnorm": 50,
+      "WGPUTextureFormat_BC5RGUnorm": 51,
+      "WGPUTextureFormat_BC5RGSnorm": 52,
+      "WGPUTextureFormat_BC6HRGBUfloat": 53,
+      "WGPUTextureFormat_BC6HRGBFloat": 54,
+      "WGPUTextureFormat_BC7RGBAUnorm": 55,
+      "WGPUTextureFormat_BC7RGBAUnormSrgb": 56,
+      "WGPUTextureFormat_ETC2RGB8Unorm": 57,
+      "WGPUTextureFormat_ETC2RGB8UnormSrgb": 58,
+      "WGPUTextureFormat_ETC2RGB8A1Unorm": 59,
+      "WGPUTextureFormat_ETC2RGB8A1UnormSrgb": 60,
+      "WGPUTextureFormat_ETC2RGBA8Unorm": 61,
+      "WGPUTextureFormat_ETC2RGBA8UnormSrgb": 62,
+      "WGPUTextureFormat_EACR11Unorm": 63,
+      "WGPUTextureFormat_EACR11Snorm": 64,
+      "WGPUTextureFormat_EACRG11Unorm": 65,
+      "WGPUTextureFormat_EACRG11Snorm": 66,
+      "WGPUTextureFormat_ASTC4x4Unorm": 67,
+      "WGPUTextureFormat_ASTC4x4UnormSrgb": 68,
+      "WGPUTextureFormat_ASTC5x4Unorm": 69,
+      "WGPUTextureFormat_ASTC5x4UnormSrgb": 70,
+      "WGPUTextureFormat_ASTC5x5Unorm": 71,
+      "WGPUTextureFormat_ASTC5x5UnormSrgb": 72,
+      "WGPUTextureFormat_ASTC6x5Unorm": 73,
+      "WGPUTextureFormat_ASTC6x5UnormSrgb": 74,
+      "WGPUTextureFormat_ASTC6x6Unorm": 75,
+      "WGPUTextureFormat_ASTC6x6UnormSrgb": 76,
+      "WGPUTextureFormat_ASTC8x5Unorm": 77,
+      "WGPUTextureFormat_ASTC8x5UnormSrgb": 78,
+      "WGPUTextureFormat_ASTC8x6Unorm": 79,
+      "WGPUTextureFormat_ASTC8x6UnormSrgb": 80,
+      "WGPUTextureFormat_ASTC8x8Unorm": 81,
+      "WGPUTextureFormat_ASTC8x8UnormSrgb": 82,
+      "WGPUTextureFormat_ASTC10x5Unorm": 83,
+      "WGPUTextureFormat_ASTC10x5UnormSrgb": 84,
+      "WGPUTextureFormat_ASTC10x6Unorm": 85,
+      "WGPUTextureFormat_ASTC10x6UnormSrgb": 86,
+      "WGPUTextureFormat_ASTC10x8Unorm": 87,
+      "WGPUTextureFormat_ASTC10x8UnormSrgb": 88,
+      "WGPUTextureFormat_ASTC10x10Unorm": 89,
+      "WGPUTextureFormat_ASTC10x10UnormSrgb": 90,
+      "WGPUTextureFormat_ASTC12x10Unorm": 91,
+      "WGPUTextureFormat_ASTC12x10UnormSrgb": 92,
+      "WGPUTextureFormat_ASTC12x12Unorm": 93,
+      "WGPUTextureFormat_ASTC12x12UnormSrgb": 94,
+      "WGPUTextureFormat_Force32": 2147483647
+    },
+    "WGPUTextureSampleType": {
+      "WGPUTextureSampleType_Undefined": 0,
+      "WGPUTextureSampleType_Float": 1,
+      "WGPUTextureSampleType_UnfilterableFloat": 2,
+      "WGPUTextureSampleType_Depth": 3,
+      "WGPUTextureSampleType_Sint": 4,
+      "WGPUTextureSampleType_Uint": 5,
+      "WGPUTextureSampleType_Force32": 2147483647
+    },
+    "WGPUTextureViewDimension": {
+      "WGPUTextureViewDimension_Undefined": 0,
+      "WGPUTextureViewDimension_1D": 1,
+      "WGPUTextureViewDimension_2D": 2,
+      "WGPUTextureViewDimension_2DArray": 3,
+      "WGPUTextureViewDimension_Cube": 4,
+      "WGPUTextureViewDimension_CubeArray": 5,
+      "WGPUTextureViewDimension_3D": 6,
+      "WGPUTextureViewDimension_Force32": 2147483647
+    },
+    "WGPUVertexFormat": {
+      "WGPUVertexFormat_Undefined": 0,
+      "WGPUVertexFormat_Uint8x2": 1,
+      "WGPUVertexFormat_Uint8x4": 2,
+      "WGPUVertexFormat_Sint8x2": 3,
+      "WGPUVertexFormat_Sint8x4": 4,
+      "WGPUVertexFormat_Unorm8x2": 5,
+      "WGPUVertexFormat_Unorm8x4": 6,
+      "WGPUVertexFormat_Snorm8x2": 7,
+      "WGPUVertexFormat_Snorm8x4": 8,
+      "WGPUVertexFormat_Uint16x2": 9,
+      "WGPUVertexFormat_Uint16x4": 10,
+      "WGPUVertexFormat_Sint16x2": 11,
+      "WGPUVertexFormat_Sint16x4": 12,
+      "WGPUVertexFormat_Unorm16x2": 13,
+      "WGPUVertexFormat_Unorm16x4": 14,
+      "WGPUVertexFormat_Snorm16x2": 15,
+      "WGPUVertexFormat_Snorm16x4": 16,
+      "WGPUVertexFormat_Float16x2": 17,
+      "WGPUVertexFormat_Float16x4": 18,
+      "WGPUVertexFormat_Float32": 19,
+      "WGPUVertexFormat_Float32x2": 20,
+      "WGPUVertexFormat_Float32x3": 21,
+      "WGPUVertexFormat_Float32x4": 22,
+      "WGPUVertexFormat_Uint32": 23,
+      "WGPUVertexFormat_Uint32x2": 24,
+      "WGPUVertexFormat_Uint32x3": 25,
+      "WGPUVertexFormat_Uint32x4": 26,
+      "WGPUVertexFormat_Sint32": 27,
+      "WGPUVertexFormat_Sint32x2": 28,
+      "WGPUVertexFormat_Sint32x3": 29,
+      "WGPUVertexFormat_Sint32x4": 30,
+      "WGPUVertexFormat_Force32": 2147483647
+    },
+    "WGPUVertexStepMode": {
+      "WGPUVertexStepMode_Vertex": 0,
+      "WGPUVertexStepMode_Instance": 1,
+      "WGPUVertexStepMode_VertexBufferNotUsed": 2,
+      "WGPUVertexStepMode_Force32": 2147483647
+    },
+    "WGPUBufferUsage": {
+      "WGPUBufferUsage_None": 0,
+      "WGPUBufferUsage_MapRead": 1,
+      "WGPUBufferUsage_MapWrite": 2,
+      "WGPUBufferUsage_CopySrc": 4,
+      "WGPUBufferUsage_CopyDst": 8,
+      "WGPUBufferUsage_Index": 16,
+      "WGPUBufferUsage_Vertex": 32,
+      "WGPUBufferUsage_Uniform": 64,
+      "WGPUBufferUsage_Storage": 128,
+      "WGPUBufferUsage_Indirect": 256,
+      "WGPUBufferUsage_QueryResolve": 512,
+      "WGPUBufferUsage_Force32": 2147483647
+    },
+    "WGPUColorWriteMask": {
+      "WGPUColorWriteMask_None": 0,
+      "WGPUColorWriteMask_Red": 1,
+      "WGPUColorWriteMask_Green": 2,
+      "WGPUColorWriteMask_Blue": 4,
+      "WGPUColorWriteMask_Alpha": 8,
+      "WGPUColorWriteMask_All": 15,
+      "WGPUColorWriteMask_Force32": 2147483647
+    },
+    "WGPUMapMode": {
+      "WGPUMapMode_None": 0,
+      "WGPUMapMode_Read": 1,
+      "WGPUMapMode_Write": 2,
+      "WGPUMapMode_Force32": 2147483647
+    },
+    "WGPUShaderStage": {
+      "WGPUShaderStage_None": 0,
+      "WGPUShaderStage_Vertex": 1,
+      "WGPUShaderStage_Fragment": 2,
+      "WGPUShaderStage_Compute": 4,
+      "WGPUShaderStage_Force32": 2147483647
+    },
+    "WGPUTextureUsage": {
+      "WGPUTextureUsage_None": 0,
+      "WGPUTextureUsage_CopySrc": 1,
+      "WGPUTextureUsage_CopyDst": 2,
+      "WGPUTextureUsage_TextureBinding": 4,
+      "WGPUTextureUsage_StorageBinding": 8,
+      "WGPUTextureUsage_RenderAttachment": 16,
+      "WGPUTextureUsage_Force32": 2147483647
+    }
+  },
+  "functions": {
+    "wgpuCreateInstance": [
+      ["WGPUInstance"],
+      [["descriptor", ["WGPUInstanceDescriptor", "*"], null]]
+    ],
+    "wgpuGetProcAddress": [
+      ["WGPUProc"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["procName", ["char", "*"], null]
+      ]
+    ],
+    "wgpuAdapterEnumerateFeatures": [
+      ["size_t"],
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["features", ["WGPUFeatureName", "*"], null]
+      ]
+    ],
+    "wgpuAdapterGetLimits": [
+      ["bool"],
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["limits", ["WGPUSupportedLimits", "*"], null]
+      ]
+    ],
+    "wgpuAdapterGetProperties": [
+      ["void"],
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["properties", ["WGPUAdapterProperties", "*"], null]
+      ]
+    ],
+    "wgpuAdapterHasFeature": [
+      ["bool"],
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["feature", ["WGPUFeatureName"], null]
+      ]
+    ],
+    "wgpuAdapterRequestDevice": [
+      ["void"],
+      [
+        ["adapter", ["WGPUAdapter"], null],
+        ["descriptor", ["WGPUDeviceDescriptor", "*"], null],
+        ["callback", ["WGPURequestDeviceCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuBindGroupSetLabel": [
+      ["void"],
+      [
+        ["bindGroup", ["WGPUBindGroup"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuBindGroupLayoutSetLabel": [
+      ["void"],
+      [
+        ["bindGroupLayout", ["WGPUBindGroupLayout"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuBufferDestroy": [["void"], [["buffer", ["WGPUBuffer"], null]]],
+    "wgpuBufferGetConstMappedRange": [
+      ["void", "*"],
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["size_t"], null],
+        ["size", ["size_t"], null]
+      ]
+    ],
+    "wgpuBufferGetMapState": [
+      ["WGPUBufferMapState"],
+      [["buffer", ["WGPUBuffer"], null]]
+    ],
+    "wgpuBufferGetMappedRange": [
+      ["void", "*"],
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["size_t"], null],
+        ["size", ["size_t"], null]
+      ]
+    ],
+    "wgpuBufferGetSize": [["uint64_t"], [["buffer", ["WGPUBuffer"], null]]],
+    "wgpuBufferGetUsage": [
+      ["WGPUBufferUsage"],
+      [["buffer", ["WGPUBuffer"], null]]
+    ],
+    "wgpuBufferMapAsync": [
+      ["void"],
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["mode", ["WGPUMapModeFlags"], null],
+        ["offset", ["size_t"], null],
+        ["size", ["size_t"], null],
+        ["callback", ["WGPUBufferMapCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuBufferSetLabel": [
+      ["void"],
+      [
+        ["buffer", ["WGPUBuffer"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuBufferUnmap": [["void"], [["buffer", ["WGPUBuffer"], null]]],
+    "wgpuCommandBufferSetLabel": [
+      ["void"],
+      [
+        ["commandBuffer", ["WGPUCommandBuffer"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderBeginComputePass": [
+      ["WGPUComputePassEncoder"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["descriptor", ["WGPUComputePassDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderBeginRenderPass": [
+      ["WGPURenderPassEncoder"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["descriptor", ["WGPURenderPassDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderClearBuffer": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuCommandEncoderCopyBufferToBuffer": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUBuffer"], null],
+        ["sourceOffset", ["uint64_t"], null],
+        ["destination", ["WGPUBuffer"], null],
+        ["destinationOffset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuCommandEncoderCopyBufferToTexture": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUImageCopyBuffer", "*"], null],
+        ["destination", ["WGPUImageCopyTexture", "*"], null],
+        ["copySize", ["WGPUExtent3D", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderCopyTextureToBuffer": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUImageCopyTexture", "*"], null],
+        ["destination", ["WGPUImageCopyBuffer", "*"], null],
+        ["copySize", ["WGPUExtent3D", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderCopyTextureToTexture": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["source", ["WGPUImageCopyTexture", "*"], null],
+        ["destination", ["WGPUImageCopyTexture", "*"], null],
+        ["copySize", ["WGPUExtent3D", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderFinish": [
+      ["WGPUCommandBuffer"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["descriptor", ["WGPUCommandBufferDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderInsertDebugMarker": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderPopDebugGroup": [
+      ["void"],
+      [["commandEncoder", ["WGPUCommandEncoder"], null]]
+    ],
+    "wgpuCommandEncoderPushDebugGroup": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderResolveQuerySet": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["firstQuery", ["uint32_t"], null],
+        ["queryCount", ["uint32_t"], null],
+        ["destination", ["WGPUBuffer"], null],
+        ["destinationOffset", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuCommandEncoderSetLabel": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuCommandEncoderWriteTimestamp": [
+      ["void"],
+      [
+        ["commandEncoder", ["WGPUCommandEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderBeginPipelineStatisticsQuery": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderDispatchWorkgroups": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["workgroupCountX", ["uint32_t"], null],
+        ["workgroupCountY", ["uint32_t"], null],
+        ["workgroupCountZ", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderDispatchWorkgroupsIndirect": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderEnd": [
+      ["void"],
+      [["computePassEncoder", ["WGPUComputePassEncoder"], null]]
+    ],
+    "wgpuComputePassEncoderEndPipelineStatisticsQuery": [
+      ["void"],
+      [["computePassEncoder", ["WGPUComputePassEncoder"], null]]
+    ],
+    "wgpuComputePassEncoderInsertDebugMarker": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderPopDebugGroup": [
+      ["void"],
+      [["computePassEncoder", ["WGPUComputePassEncoder"], null]]
+    ],
+    "wgpuComputePassEncoderPushDebugGroup": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderSetBindGroup": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["groupIndex", ["uint32_t"], null],
+        ["group", ["WGPUBindGroup"], null],
+        ["dynamicOffsetCount", ["uint32_t"], null],
+        ["dynamicOffsets", ["uint32_t", "*"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderSetLabel": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuComputePassEncoderSetPipeline": [
+      ["void"],
+      [
+        ["computePassEncoder", ["WGPUComputePassEncoder"], null],
+        ["pipeline", ["WGPUComputePipeline"], null]
+      ]
+    ],
+    "wgpuComputePipelineGetBindGroupLayout": [
+      ["WGPUBindGroupLayout"],
+      [
+        ["computePipeline", ["WGPUComputePipeline"], null],
+        ["groupIndex", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuComputePipelineSetLabel": [
+      ["void"],
+      [
+        ["computePipeline", ["WGPUComputePipeline"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateBindGroup": [
+      ["WGPUBindGroup"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUBindGroupDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateBindGroupLayout": [
+      ["WGPUBindGroupLayout"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUBindGroupLayoutDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateBuffer": [
+      ["WGPUBuffer"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUBufferDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateCommandEncoder": [
+      ["WGPUCommandEncoder"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUCommandEncoderDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateComputePipeline": [
+      ["WGPUComputePipeline"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUComputePipelineDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateComputePipelineAsync": [
+      ["void"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUComputePipelineDescriptor", "*"], null],
+        ["callback", ["WGPUCreateComputePipelineAsyncCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreatePipelineLayout": [
+      ["WGPUPipelineLayout"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUPipelineLayoutDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateQuerySet": [
+      ["WGPUQuerySet"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUQuerySetDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateRenderBundleEncoder": [
+      ["WGPURenderBundleEncoder"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPURenderBundleEncoderDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateRenderPipeline": [
+      ["WGPURenderPipeline"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPURenderPipelineDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateRenderPipelineAsync": [
+      ["void"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPURenderPipelineDescriptor", "*"], null],
+        ["callback", ["WGPUCreateRenderPipelineAsyncCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateSampler": [
+      ["WGPUSampler"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUSamplerDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateShaderModule": [
+      ["WGPUShaderModule"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUShaderModuleDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateSwapChain": [
+      ["WGPUSwapChain"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["surface", ["WGPUSurface"], null],
+        ["descriptor", ["WGPUSwapChainDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceCreateTexture": [
+      ["WGPUTexture"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["descriptor", ["WGPUTextureDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuDeviceDestroy": [["void"], [["device", ["WGPUDevice"], null]]],
+    "wgpuDeviceEnumerateFeatures": [
+      ["size_t"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["features", ["WGPUFeatureName", "*"], null]
+      ]
+    ],
+    "wgpuDeviceGetLimits": [
+      ["bool"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["limits", ["WGPUSupportedLimits", "*"], null]
+      ]
+    ],
+    "wgpuDeviceGetQueue": [["WGPUQueue"], [["device", ["WGPUDevice"], null]]],
+    "wgpuDeviceHasFeature": [
+      ["bool"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["feature", ["WGPUFeatureName"], null]
+      ]
+    ],
+    "wgpuDevicePopErrorScope": [
+      ["bool"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["callback", ["WGPUErrorCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuDevicePushErrorScope": [
+      ["void"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["filter", ["WGPUErrorFilter"], null]
+      ]
+    ],
+    "wgpuDeviceSetDeviceLostCallback": [
+      ["void"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["callback", ["WGPUDeviceLostCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuDeviceSetLabel": [
+      ["void"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuDeviceSetUncapturedErrorCallback": [
+      ["void"],
+      [
+        ["device", ["WGPUDevice"], null],
+        ["callback", ["WGPUErrorCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuInstanceCreateSurface": [
+      ["WGPUSurface"],
+      [
+        ["instance", ["WGPUInstance"], null],
+        ["descriptor", ["WGPUSurfaceDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuInstanceProcessEvents": [
+      ["void"],
+      [["instance", ["WGPUInstance"], null]]
+    ],
+    "wgpuInstanceRequestAdapter": [
+      ["void"],
+      [
+        ["instance", ["WGPUInstance"], null],
+        ["options", ["WGPURequestAdapterOptions", "*"], null],
+        ["callback", ["WGPURequestAdapterCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuPipelineLayoutSetLabel": [
+      ["void"],
+      [
+        ["pipelineLayout", ["WGPUPipelineLayout"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuQuerySetDestroy": [["void"], [["querySet", ["WGPUQuerySet"], null]]],
+    "wgpuQuerySetGetCount": [
+      ["uint32_t"],
+      [["querySet", ["WGPUQuerySet"], null]]
+    ],
+    "wgpuQuerySetGetType": [
+      ["WGPUQueryType"],
+      [["querySet", ["WGPUQuerySet"], null]]
+    ],
+    "wgpuQuerySetSetLabel": [
+      ["void"],
+      [
+        ["querySet", ["WGPUQuerySet"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuQueueOnSubmittedWorkDone": [
+      ["void"],
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["callback", ["WGPUQueueWorkDoneCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuQueueSetLabel": [
+      ["void"],
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuQueueSubmit": [
+      ["void"],
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["commandCount", ["uint32_t"], null],
+        ["commands", ["WGPUCommandBuffer", "*"], null]
+      ]
+    ],
+    "wgpuQueueWriteBuffer": [
+      ["void"],
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["bufferOffset", ["uint64_t"], null],
+        ["data", ["void", "*"], null],
+        ["size", ["size_t"], null]
+      ]
+    ],
+    "wgpuQueueWriteTexture": [
+      ["void"],
+      [
+        ["queue", ["WGPUQueue"], null],
+        ["destination", ["WGPUImageCopyTexture", "*"], null],
+        ["data", ["void", "*"], null],
+        ["dataSize", ["size_t"], null],
+        ["dataLayout", ["WGPUTextureDataLayout", "*"], null],
+        ["writeSize", ["WGPUExtent3D", "*"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderDraw": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["vertexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstVertex", ["uint32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderDrawIndexed": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["indexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstIndex", ["uint32_t"], null],
+        ["baseVertex", ["int32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderDrawIndexedIndirect": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderDrawIndirect": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderFinish": [
+      ["WGPURenderBundle"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["descriptor", ["WGPURenderBundleDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderInsertDebugMarker": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderPopDebugGroup": [
+      ["void"],
+      [["renderBundleEncoder", ["WGPURenderBundleEncoder"], null]]
+    ],
+    "wgpuRenderBundleEncoderPushDebugGroup": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderSetBindGroup": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["groupIndex", ["uint32_t"], null],
+        ["group", ["WGPUBindGroup"], null],
+        ["dynamicOffsetCount", ["uint32_t"], null],
+        ["dynamicOffsets", ["uint32_t", "*"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderSetIndexBuffer": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["format", ["WGPUIndexFormat"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderSetLabel": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderSetPipeline": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["pipeline", ["WGPURenderPipeline"], null]
+      ]
+    ],
+    "wgpuRenderBundleEncoderSetVertexBuffer": [
+      ["void"],
+      [
+        ["renderBundleEncoder", ["WGPURenderBundleEncoder"], null],
+        ["slot", ["uint32_t"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderBeginOcclusionQuery": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderBeginPipelineStatisticsQuery": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["querySet", ["WGPUQuerySet"], null],
+        ["queryIndex", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderDraw": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["vertexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstVertex", ["uint32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderDrawIndexed": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["indexCount", ["uint32_t"], null],
+        ["instanceCount", ["uint32_t"], null],
+        ["firstIndex", ["uint32_t"], null],
+        ["baseVertex", ["int32_t"], null],
+        ["firstInstance", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderDrawIndexedIndirect": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderDrawIndirect": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["indirectBuffer", ["WGPUBuffer"], null],
+        ["indirectOffset", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderEnd": [
+      ["void"],
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]]
+    ],
+    "wgpuRenderPassEncoderEndOcclusionQuery": [
+      ["void"],
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]]
+    ],
+    "wgpuRenderPassEncoderEndPipelineStatisticsQuery": [
+      ["void"],
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]]
+    ],
+    "wgpuRenderPassEncoderExecuteBundles": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["bundleCount", ["uint32_t"], null],
+        ["bundles", ["WGPURenderBundle", "*"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderInsertDebugMarker": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["markerLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderPopDebugGroup": [
+      ["void"],
+      [["renderPassEncoder", ["WGPURenderPassEncoder"], null]]
+    ],
+    "wgpuRenderPassEncoderPushDebugGroup": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["groupLabel", ["char", "*"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetBindGroup": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["groupIndex", ["uint32_t"], null],
+        ["group", ["WGPUBindGroup"], null],
+        ["dynamicOffsetCount", ["uint32_t"], null],
+        ["dynamicOffsets", ["uint32_t", "*"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetBlendConstant": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["color", ["WGPUColor", "*"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetIndexBuffer": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["format", ["WGPUIndexFormat"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetLabel": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetPipeline": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["pipeline", ["WGPURenderPipeline"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetScissorRect": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["x", ["uint32_t"], null],
+        ["y", ["uint32_t"], null],
+        ["width", ["uint32_t"], null],
+        ["height", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetStencilReference": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["reference", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetVertexBuffer": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["slot", ["uint32_t"], null],
+        ["buffer", ["WGPUBuffer"], null],
+        ["offset", ["uint64_t"], null],
+        ["size", ["uint64_t"], null]
+      ]
+    ],
+    "wgpuRenderPassEncoderSetViewport": [
+      ["void"],
+      [
+        ["renderPassEncoder", ["WGPURenderPassEncoder"], null],
+        ["x", ["float"], null],
+        ["y", ["float"], null],
+        ["width", ["float"], null],
+        ["height", ["float"], null],
+        ["minDepth", ["float"], null],
+        ["maxDepth", ["float"], null]
+      ]
+    ],
+    "wgpuRenderPipelineGetBindGroupLayout": [
+      ["WGPUBindGroupLayout"],
+      [
+        ["renderPipeline", ["WGPURenderPipeline"], null],
+        ["groupIndex", ["uint32_t"], null]
+      ]
+    ],
+    "wgpuRenderPipelineSetLabel": [
+      ["void"],
+      [
+        ["renderPipeline", ["WGPURenderPipeline"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuSamplerSetLabel": [
+      ["void"],
+      [
+        ["sampler", ["WGPUSampler"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuShaderModuleGetCompilationInfo": [
+      ["void"],
+      [
+        ["shaderModule", ["WGPUShaderModule"], null],
+        ["callback", ["WGPUCompilationInfoCallback"], null],
+        ["userdata", ["void", "*"], null]
+      ]
+    ],
+    "wgpuShaderModuleSetLabel": [
+      ["void"],
+      [
+        ["shaderModule", ["WGPUShaderModule"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuSurfaceGetPreferredFormat": [
+      ["WGPUTextureFormat"],
+      [
+        ["surface", ["WGPUSurface"], null],
+        ["adapter", ["WGPUAdapter"], null]
+      ]
+    ],
+    "wgpuSwapChainGetCurrentTextureView": [
+      ["WGPUTextureView"],
+      [["swapChain", ["WGPUSwapChain"], null]]
+    ],
+    "wgpuSwapChainPresent": [
+      ["void"],
+      [["swapChain", ["WGPUSwapChain"], null]]
+    ],
+    "wgpuTextureCreateView": [
+      ["WGPUTextureView"],
+      [
+        ["texture", ["WGPUTexture"], null],
+        ["descriptor", ["WGPUTextureViewDescriptor", "*"], null]
+      ]
+    ],
+    "wgpuTextureDestroy": [["void"], [["texture", ["WGPUTexture"], null]]],
+    "wgpuTextureGetDepthOrArrayLayers": [
+      ["uint32_t"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetDimension": [
+      ["WGPUTextureDimension"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetFormat": [
+      ["WGPUTextureFormat"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetHeight": [
+      ["uint32_t"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetMipLevelCount": [
+      ["uint32_t"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetSampleCount": [
+      ["uint32_t"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetUsage": [
+      ["WGPUTextureUsage"],
+      [["texture", ["WGPUTexture"], null]]
+    ],
+    "wgpuTextureGetWidth": [["uint32_t"], [["texture", ["WGPUTexture"], null]]],
+    "wgpuTextureSetLabel": [
+      ["void"],
+      [
+        ["texture", ["WGPUTexture"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ],
+    "wgpuTextureViewSetLabel": [
+      ["void"],
+      [
+        ["textureView", ["WGPUTextureView"], null],
+        ["label", ["char", "*"], null]
+      ]
+    ]
+  },
+  "values": {
+    "WEBGPU_H_": null,
+    "WGPU_EXPORT": null,
+    "WGPU_ARRAY_LAYER_COUNT_UNDEFINED": 4294967295,
+    "WGPU_COPY_STRIDE_UNDEFINED": 4294967295,
+    "WGPU_LIMIT_U32_UNDEFINED": 4294967295,
+    "WGPU_LIMIT_U64_UNDEFINED": 18446744073709551615,
+    "WGPU_MIP_LEVEL_COUNT_UNDEFINED": 4294967295,
+    "WGPU_WHOLE_MAP_SIZE": null,
+    "WGPU_WHOLE_SIZE": 18446744073709551615,
+    "WGPUAdapterType_DiscreteGPU": 0,
+    "WGPUAdapterType_IntegratedGPU": 1,
+    "WGPUAdapterType_CPU": 2,
+    "WGPUAdapterType_Unknown": 3,
+    "WGPUAdapterType_Force32": 2147483647,
+    "WGPUAddressMode_Repeat": 0,
+    "WGPUAddressMode_MirrorRepeat": 1,
+    "WGPUAddressMode_ClampToEdge": 2,
+    "WGPUAddressMode_Force32": 2147483647,
+    "WGPUBackendType_Null": 0,
+    "WGPUBackendType_WebGPU": 1,
+    "WGPUBackendType_D3D11": 2,
+    "WGPUBackendType_D3D12": 3,
+    "WGPUBackendType_Metal": 4,
+    "WGPUBackendType_Vulkan": 5,
+    "WGPUBackendType_OpenGL": 6,
+    "WGPUBackendType_OpenGLES": 7,
+    "WGPUBackendType_Force32": 2147483647,
+    "WGPUBlendFactor_Zero": 0,
+    "WGPUBlendFactor_One": 1,
+    "WGPUBlendFactor_Src": 2,
+    "WGPUBlendFactor_OneMinusSrc": 3,
+    "WGPUBlendFactor_SrcAlpha": 4,
+    "WGPUBlendFactor_OneMinusSrcAlpha": 5,
+    "WGPUBlendFactor_Dst": 6,
+    "WGPUBlendFactor_OneMinusDst": 7,
+    "WGPUBlendFactor_DstAlpha": 8,
+    "WGPUBlendFactor_OneMinusDstAlpha": 9,
+    "WGPUBlendFactor_SrcAlphaSaturated": 10,
+    "WGPUBlendFactor_Constant": 11,
+    "WGPUBlendFactor_OneMinusConstant": 12,
+    "WGPUBlendFactor_Force32": 2147483647,
+    "WGPUBlendOperation_Add": 0,
+    "WGPUBlendOperation_Subtract": 1,
+    "WGPUBlendOperation_ReverseSubtract": 2,
+    "WGPUBlendOperation_Min": 3,
+    "WGPUBlendOperation_Max": 4,
+    "WGPUBlendOperation_Force32": 2147483647,
+    "WGPUBufferBindingType_Undefined": 0,
+    "WGPUBufferBindingType_Uniform": 1,
+    "WGPUBufferBindingType_Storage": 2,
+    "WGPUBufferBindingType_ReadOnlyStorage": 3,
+    "WGPUBufferBindingType_Force32": 2147483647,
+    "WGPUBufferMapAsyncStatus_Success": 0,
+    "WGPUBufferMapAsyncStatus_Error": 1,
+    "WGPUBufferMapAsyncStatus_Unknown": 2,
+    "WGPUBufferMapAsyncStatus_DeviceLost": 3,
+    "WGPUBufferMapAsyncStatus_DestroyedBeforeCallback": 4,
+    "WGPUBufferMapAsyncStatus_UnmappedBeforeCallback": 5,
+    "WGPUBufferMapAsyncStatus_Force32": 2147483647,
+    "WGPUBufferMapState_Unmapped": 0,
+    "WGPUBufferMapState_Pending": 1,
+    "WGPUBufferMapState_Mapped": 2,
+    "WGPUBufferMapState_Force32": 2147483647,
+    "WGPUCompareFunction_Undefined": 0,
+    "WGPUCompareFunction_Never": 1,
+    "WGPUCompareFunction_Less": 2,
+    "WGPUCompareFunction_LessEqual": 3,
+    "WGPUCompareFunction_Greater": 4,
+    "WGPUCompareFunction_GreaterEqual": 5,
+    "WGPUCompareFunction_Equal": 6,
+    "WGPUCompareFunction_NotEqual": 7,
+    "WGPUCompareFunction_Always": 8,
+    "WGPUCompareFunction_Force32": 2147483647,
+    "WGPUCompilationInfoRequestStatus_Success": 0,
+    "WGPUCompilationInfoRequestStatus_Error": 1,
+    "WGPUCompilationInfoRequestStatus_DeviceLost": 2,
+    "WGPUCompilationInfoRequestStatus_Unknown": 3,
+    "WGPUCompilationInfoRequestStatus_Force32": 2147483647,
+    "WGPUCompilationMessageType_Error": 0,
+    "WGPUCompilationMessageType_Warning": 1,
+    "WGPUCompilationMessageType_Info": 2,
+    "WGPUCompilationMessageType_Force32": 2147483647,
+    "WGPUComputePassTimestampLocation_Beginning": 0,
+    "WGPUComputePassTimestampLocation_End": 1,
+    "WGPUComputePassTimestampLocation_Force32": 2147483647,
+    "WGPUCreatePipelineAsyncStatus_Success": 0,
+    "WGPUCreatePipelineAsyncStatus_ValidationError": 1,
+    "WGPUCreatePipelineAsyncStatus_InternalError": 2,
+    "WGPUCreatePipelineAsyncStatus_DeviceLost": 3,
+    "WGPUCreatePipelineAsyncStatus_DeviceDestroyed": 4,
+    "WGPUCreatePipelineAsyncStatus_Unknown": 5,
+    "WGPUCreatePipelineAsyncStatus_Force32": 2147483647,
+    "WGPUCullMode_None": 0,
+    "WGPUCullMode_Front": 1,
+    "WGPUCullMode_Back": 2,
+    "WGPUCullMode_Force32": 2147483647,
+    "WGPUDeviceLostReason_Undefined": 0,
+    "WGPUDeviceLostReason_Destroyed": 1,
+    "WGPUDeviceLostReason_Force32": 2147483647,
+    "WGPUErrorFilter_Validation": 0,
+    "WGPUErrorFilter_OutOfMemory": 1,
+    "WGPUErrorFilter_Internal": 2,
+    "WGPUErrorFilter_Force32": 2147483647,
+    "WGPUErrorType_NoError": 0,
+    "WGPUErrorType_Validation": 1,
+    "WGPUErrorType_OutOfMemory": 2,
+    "WGPUErrorType_Internal": 3,
+    "WGPUErrorType_Unknown": 4,
+    "WGPUErrorType_DeviceLost": 5,
+    "WGPUErrorType_Force32": 2147483647,
+    "WGPUFeatureName_Undefined": 0,
+    "WGPUFeatureName_DepthClipControl": 1,
+    "WGPUFeatureName_Depth32FloatStencil8": 2,
+    "WGPUFeatureName_TimestampQuery": 3,
+    "WGPUFeatureName_PipelineStatisticsQuery": 4,
+    "WGPUFeatureName_TextureCompressionBC": 5,
+    "WGPUFeatureName_TextureCompressionETC2": 6,
+    "WGPUFeatureName_TextureCompressionASTC": 7,
+    "WGPUFeatureName_IndirectFirstInstance": 8,
+    "WGPUFeatureName_ShaderF16": 9,
+    "WGPUFeatureName_RG11B10UfloatRenderable": 10,
+    "WGPUFeatureName_BGRA8UnormStorage": 11,
+    "WGPUFeatureName_Force32": 2147483647,
+    "WGPUFilterMode_Nearest": 0,
+    "WGPUFilterMode_Linear": 1,
+    "WGPUFilterMode_Force32": 2147483647,
+    "WGPUFrontFace_CCW": 0,
+    "WGPUFrontFace_CW": 1,
+    "WGPUFrontFace_Force32": 2147483647,
+    "WGPUIndexFormat_Undefined": 0,
+    "WGPUIndexFormat_Uint16": 1,
+    "WGPUIndexFormat_Uint32": 2,
+    "WGPUIndexFormat_Force32": 2147483647,
+    "WGPULoadOp_Undefined": 0,
+    "WGPULoadOp_Clear": 1,
+    "WGPULoadOp_Load": 2,
+    "WGPULoadOp_Force32": 2147483647,
+    "WGPUMipmapFilterMode_Nearest": 0,
+    "WGPUMipmapFilterMode_Linear": 1,
+    "WGPUMipmapFilterMode_Force32": 2147483647,
+    "WGPUPipelineStatisticName_VertexShaderInvocations": 0,
+    "WGPUPipelineStatisticName_ClipperInvocations": 1,
+    "WGPUPipelineStatisticName_ClipperPrimitivesOut": 2,
+    "WGPUPipelineStatisticName_FragmentShaderInvocations": 3,
+    "WGPUPipelineStatisticName_ComputeShaderInvocations": 4,
+    "WGPUPipelineStatisticName_Force32": 2147483647,
+    "WGPUPowerPreference_Undefined": 0,
+    "WGPUPowerPreference_LowPower": 1,
+    "WGPUPowerPreference_HighPerformance": 2,
+    "WGPUPowerPreference_Force32": 2147483647,
+    "WGPUPresentMode_Immediate": 0,
+    "WGPUPresentMode_Mailbox": 1,
+    "WGPUPresentMode_Fifo": 2,
+    "WGPUPresentMode_Force32": 2147483647,
+    "WGPUPrimitiveTopology_PointList": 0,
+    "WGPUPrimitiveTopology_LineList": 1,
+    "WGPUPrimitiveTopology_LineStrip": 2,
+    "WGPUPrimitiveTopology_TriangleList": 3,
+    "WGPUPrimitiveTopology_TriangleStrip": 4,
+    "WGPUPrimitiveTopology_Force32": 2147483647,
+    "WGPUQueryType_Occlusion": 0,
+    "WGPUQueryType_PipelineStatistics": 1,
+    "WGPUQueryType_Timestamp": 2,
+    "WGPUQueryType_Force32": 2147483647,
+    "WGPUQueueWorkDoneStatus_Success": 0,
+    "WGPUQueueWorkDoneStatus_Error": 1,
+    "WGPUQueueWorkDoneStatus_Unknown": 2,
+    "WGPUQueueWorkDoneStatus_DeviceLost": 3,
+    "WGPUQueueWorkDoneStatus_Force32": 2147483647,
+    "WGPURenderPassTimestampLocation_Beginning": 0,
+    "WGPURenderPassTimestampLocation_End": 1,
+    "WGPURenderPassTimestampLocation_Force32": 2147483647,
+    "WGPURequestAdapterStatus_Success": 0,
+    "WGPURequestAdapterStatus_Unavailable": 1,
+    "WGPURequestAdapterStatus_Error": 2,
+    "WGPURequestAdapterStatus_Unknown": 3,
+    "WGPURequestAdapterStatus_Force32": 2147483647,
+    "WGPURequestDeviceStatus_Success": 0,
+    "WGPURequestDeviceStatus_Error": 1,
+    "WGPURequestDeviceStatus_Unknown": 2,
+    "WGPURequestDeviceStatus_Force32": 2147483647,
+    "WGPUSType_Invalid": 0,
+    "WGPUSType_SurfaceDescriptorFromMetalLayer": 1,
+    "WGPUSType_SurfaceDescriptorFromWindowsHWND": 2,
+    "WGPUSType_SurfaceDescriptorFromXlibWindow": 3,
+    "WGPUSType_SurfaceDescriptorFromCanvasHTMLSelector": 4,
+    "WGPUSType_ShaderModuleSPIRVDescriptor": 5,
+    "WGPUSType_ShaderModuleWGSLDescriptor": 6,
+    "WGPUSType_PrimitiveDepthClipControl": 7,
+    "WGPUSType_SurfaceDescriptorFromWaylandSurface": 8,
+    "WGPUSType_SurfaceDescriptorFromAndroidNativeWindow": 9,
+    "WGPUSType_SurfaceDescriptorFromXcbWindow": 10,
+    "WGPUSType_RenderPassDescriptorMaxDrawCount": 15,
+    "WGPUSType_Force32": 2147483647,
+    "WGPUSamplerBindingType_Undefined": 0,
+    "WGPUSamplerBindingType_Filtering": 1,
+    "WGPUSamplerBindingType_NonFiltering": 2,
+    "WGPUSamplerBindingType_Comparison": 3,
+    "WGPUSamplerBindingType_Force32": 2147483647,
+    "WGPUStencilOperation_Keep": 0,
+    "WGPUStencilOperation_Zero": 1,
+    "WGPUStencilOperation_Replace": 2,
+    "WGPUStencilOperation_Invert": 3,
+    "WGPUStencilOperation_IncrementClamp": 4,
+    "WGPUStencilOperation_DecrementClamp": 5,
+    "WGPUStencilOperation_IncrementWrap": 6,
+    "WGPUStencilOperation_DecrementWrap": 7,
+    "WGPUStencilOperation_Force32": 2147483647,
+    "WGPUStorageTextureAccess_Undefined": 0,
+    "WGPUStorageTextureAccess_WriteOnly": 1,
+    "WGPUStorageTextureAccess_Force32": 2147483647,
+    "WGPUStoreOp_Undefined": 0,
+    "WGPUStoreOp_Store": 1,
+    "WGPUStoreOp_Discard": 2,
+    "WGPUStoreOp_Force32": 2147483647,
+    "WGPUTextureAspect_All": 0,
+    "WGPUTextureAspect_StencilOnly": 1,
+    "WGPUTextureAspect_DepthOnly": 2,
+    "WGPUTextureAspect_Force32": 2147483647,
+    "WGPUTextureComponentType_Float": 0,
+    "WGPUTextureComponentType_Sint": 1,
+    "WGPUTextureComponentType_Uint": 2,
+    "WGPUTextureComponentType_DepthComparison": 3,
+    "WGPUTextureComponentType_Force32": 2147483647,
+    "WGPUTextureDimension_1D": 0,
+    "WGPUTextureDimension_2D": 1,
+    "WGPUTextureDimension_3D": 2,
+    "WGPUTextureDimension_Force32": 2147483647,
+    "WGPUTextureFormat_Undefined": 0,
+    "WGPUTextureFormat_R8Unorm": 1,
+    "WGPUTextureFormat_R8Snorm": 2,
+    "WGPUTextureFormat_R8Uint": 3,
+    "WGPUTextureFormat_R8Sint": 4,
+    "WGPUTextureFormat_R16Uint": 5,
+    "WGPUTextureFormat_R16Sint": 6,
+    "WGPUTextureFormat_R16Float": 7,
+    "WGPUTextureFormat_RG8Unorm": 8,
+    "WGPUTextureFormat_RG8Snorm": 9,
+    "WGPUTextureFormat_RG8Uint": 10,
+    "WGPUTextureFormat_RG8Sint": 11,
+    "WGPUTextureFormat_R32Float": 12,
+    "WGPUTextureFormat_R32Uint": 13,
+    "WGPUTextureFormat_R32Sint": 14,
+    "WGPUTextureFormat_RG16Uint": 15,
+    "WGPUTextureFormat_RG16Sint": 16,
+    "WGPUTextureFormat_RG16Float": 17,
+    "WGPUTextureFormat_RGBA8Unorm": 18,
+    "WGPUTextureFormat_RGBA8UnormSrgb": 19,
+    "WGPUTextureFormat_RGBA8Snorm": 20,
+    "WGPUTextureFormat_RGBA8Uint": 21,
+    "WGPUTextureFormat_RGBA8Sint": 22,
+    "WGPUTextureFormat_BGRA8Unorm": 23,
+    "WGPUTextureFormat_BGRA8UnormSrgb": 24,
+    "WGPUTextureFormat_RGB10A2Unorm": 25,
+    "WGPUTextureFormat_RG11B10Ufloat": 26,
+    "WGPUTextureFormat_RGB9E5Ufloat": 27,
+    "WGPUTextureFormat_RG32Float": 28,
+    "WGPUTextureFormat_RG32Uint": 29,
+    "WGPUTextureFormat_RG32Sint": 30,
+    "WGPUTextureFormat_RGBA16Uint": 31,
+    "WGPUTextureFormat_RGBA16Sint": 32,
+    "WGPUTextureFormat_RGBA16Float": 33,
+    "WGPUTextureFormat_RGBA32Float": 34,
+    "WGPUTextureFormat_RGBA32Uint": 35,
+    "WGPUTextureFormat_RGBA32Sint": 36,
+    "WGPUTextureFormat_Stencil8": 37,
+    "WGPUTextureFormat_Depth16Unorm": 38,
+    "WGPUTextureFormat_Depth24Plus": 39,
+    "WGPUTextureFormat_Depth24PlusStencil8": 40,
+    "WGPUTextureFormat_Depth32Float": 41,
+    "WGPUTextureFormat_Depth32FloatStencil8": 42,
+    "WGPUTextureFormat_BC1RGBAUnorm": 43,
+    "WGPUTextureFormat_BC1RGBAUnormSrgb": 44,
+    "WGPUTextureFormat_BC2RGBAUnorm": 45,
+    "WGPUTextureFormat_BC2RGBAUnormSrgb": 46,
+    "WGPUTextureFormat_BC3RGBAUnorm": 47,
+    "WGPUTextureFormat_BC3RGBAUnormSrgb": 48,
+    "WGPUTextureFormat_BC4RUnorm": 49,
+    "WGPUTextureFormat_BC4RSnorm": 50,
+    "WGPUTextureFormat_BC5RGUnorm": 51,
+    "WGPUTextureFormat_BC5RGSnorm": 52,
+    "WGPUTextureFormat_BC6HRGBUfloat": 53,
+    "WGPUTextureFormat_BC6HRGBFloat": 54,
+    "WGPUTextureFormat_BC7RGBAUnorm": 55,
+    "WGPUTextureFormat_BC7RGBAUnormSrgb": 56,
+    "WGPUTextureFormat_ETC2RGB8Unorm": 57,
+    "WGPUTextureFormat_ETC2RGB8UnormSrgb": 58,
+    "WGPUTextureFormat_ETC2RGB8A1Unorm": 59,
+    "WGPUTextureFormat_ETC2RGB8A1UnormSrgb": 60,
+    "WGPUTextureFormat_ETC2RGBA8Unorm": 61,
+    "WGPUTextureFormat_ETC2RGBA8UnormSrgb": 62,
+    "WGPUTextureFormat_EACR11Unorm": 63,
+    "WGPUTextureFormat_EACR11Snorm": 64,
+    "WGPUTextureFormat_EACRG11Unorm": 65,
+    "WGPUTextureFormat_EACRG11Snorm": 66,
+    "WGPUTextureFormat_ASTC4x4Unorm": 67,
+    "WGPUTextureFormat_ASTC4x4UnormSrgb": 68,
+    "WGPUTextureFormat_ASTC5x4Unorm": 69,
+    "WGPUTextureFormat_ASTC5x4UnormSrgb": 70,
+    "WGPUTextureFormat_ASTC5x5Unorm": 71,
+    "WGPUTextureFormat_ASTC5x5UnormSrgb": 72,
+    "WGPUTextureFormat_ASTC6x5Unorm": 73,
+    "WGPUTextureFormat_ASTC6x5UnormSrgb": 74,
+    "WGPUTextureFormat_ASTC6x6Unorm": 75,
+    "WGPUTextureFormat_ASTC6x6UnormSrgb": 76,
+    "WGPUTextureFormat_ASTC8x5Unorm": 77,
+    "WGPUTextureFormat_ASTC8x5UnormSrgb": 78,
+    "WGPUTextureFormat_ASTC8x6Unorm": 79,
+    "WGPUTextureFormat_ASTC8x6UnormSrgb": 80,
+    "WGPUTextureFormat_ASTC8x8Unorm": 81,
+    "WGPUTextureFormat_ASTC8x8UnormSrgb": 82,
+    "WGPUTextureFormat_ASTC10x5Unorm": 83,
+    "WGPUTextureFormat_ASTC10x5UnormSrgb": 84,
+    "WGPUTextureFormat_ASTC10x6Unorm": 85,
+    "WGPUTextureFormat_ASTC10x6UnormSrgb": 86,
+    "WGPUTextureFormat_ASTC10x8Unorm": 87,
+    "WGPUTextureFormat_ASTC10x8UnormSrgb": 88,
+    "WGPUTextureFormat_ASTC10x10Unorm": 89,
+    "WGPUTextureFormat_ASTC10x10UnormSrgb": 90,
+    "WGPUTextureFormat_ASTC12x10Unorm": 91,
+    "WGPUTextureFormat_ASTC12x10UnormSrgb": 92,
+    "WGPUTextureFormat_ASTC12x12Unorm": 93,
+    "WGPUTextureFormat_ASTC12x12UnormSrgb": 94,
+    "WGPUTextureFormat_Force32": 2147483647,
+    "WGPUTextureSampleType_Undefined": 0,
+    "WGPUTextureSampleType_Float": 1,
+    "WGPUTextureSampleType_UnfilterableFloat": 2,
+    "WGPUTextureSampleType_Depth": 3,
+    "WGPUTextureSampleType_Sint": 4,
+    "WGPUTextureSampleType_Uint": 5,
+    "WGPUTextureSampleType_Force32": 2147483647,
+    "WGPUTextureViewDimension_Undefined": 0,
+    "WGPUTextureViewDimension_1D": 1,
+    "WGPUTextureViewDimension_2D": 2,
+    "WGPUTextureViewDimension_2DArray": 3,
+    "WGPUTextureViewDimension_Cube": 4,
+    "WGPUTextureViewDimension_CubeArray": 5,
+    "WGPUTextureViewDimension_3D": 6,
+    "WGPUTextureViewDimension_Force32": 2147483647,
+    "WGPUVertexFormat_Undefined": 0,
+    "WGPUVertexFormat_Uint8x2": 1,
+    "WGPUVertexFormat_Uint8x4": 2,
+    "WGPUVertexFormat_Sint8x2": 3,
+    "WGPUVertexFormat_Sint8x4": 4,
+    "WGPUVertexFormat_Unorm8x2": 5,
+    "WGPUVertexFormat_Unorm8x4": 6,
+    "WGPUVertexFormat_Snorm8x2": 7,
+    "WGPUVertexFormat_Snorm8x4": 8,
+    "WGPUVertexFormat_Uint16x2": 9,
+    "WGPUVertexFormat_Uint16x4": 10,
+    "WGPUVertexFormat_Sint16x2": 11,
+    "WGPUVertexFormat_Sint16x4": 12,
+    "WGPUVertexFormat_Unorm16x2": 13,
+    "WGPUVertexFormat_Unorm16x4": 14,
+    "WGPUVertexFormat_Snorm16x2": 15,
+    "WGPUVertexFormat_Snorm16x4": 16,
+    "WGPUVertexFormat_Float16x2": 17,
+    "WGPUVertexFormat_Float16x4": 18,
+    "WGPUVertexFormat_Float32": 19,
+    "WGPUVertexFormat_Float32x2": 20,
+    "WGPUVertexFormat_Float32x3": 21,
+    "WGPUVertexFormat_Float32x4": 22,
+    "WGPUVertexFormat_Uint32": 23,
+    "WGPUVertexFormat_Uint32x2": 24,
+    "WGPUVertexFormat_Uint32x3": 25,
+    "WGPUVertexFormat_Uint32x4": 26,
+    "WGPUVertexFormat_Sint32": 27,
+    "WGPUVertexFormat_Sint32x2": 28,
+    "WGPUVertexFormat_Sint32x3": 29,
+    "WGPUVertexFormat_Sint32x4": 30,
+    "WGPUVertexFormat_Force32": 2147483647,
+    "WGPUVertexStepMode_Vertex": 0,
+    "WGPUVertexStepMode_Instance": 1,
+    "WGPUVertexStepMode_VertexBufferNotUsed": 2,
+    "WGPUVertexStepMode_Force32": 2147483647,
+    "WGPUBufferUsage_None": 0,
+    "WGPUBufferUsage_MapRead": 1,
+    "WGPUBufferUsage_MapWrite": 2,
+    "WGPUBufferUsage_CopySrc": 4,
+    "WGPUBufferUsage_CopyDst": 8,
+    "WGPUBufferUsage_Index": 16,
+    "WGPUBufferUsage_Vertex": 32,
+    "WGPUBufferUsage_Uniform": 64,
+    "WGPUBufferUsage_Storage": 128,
+    "WGPUBufferUsage_Indirect": 256,
+    "WGPUBufferUsage_QueryResolve": 512,
+    "WGPUBufferUsage_Force32": 2147483647,
+    "WGPUColorWriteMask_None": 0,
+    "WGPUColorWriteMask_Red": 1,
+    "WGPUColorWriteMask_Green": 2,
+    "WGPUColorWriteMask_Blue": 4,
+    "WGPUColorWriteMask_Alpha": 8,
+    "WGPUColorWriteMask_All": 15,
+    "WGPUColorWriteMask_Force32": 2147483647,
+    "WGPUMapMode_None": 0,
+    "WGPUMapMode_Read": 1,
+    "WGPUMapMode_Write": 2,
+    "WGPUMapMode_Force32": 2147483647,
+    "WGPUShaderStage_None": 0,
+    "WGPUShaderStage_Vertex": 1,
+    "WGPUShaderStage_Fragment": 2,
+    "WGPUShaderStage_Compute": 4,
+    "WGPUShaderStage_Force32": 2147483647,
+    "WGPUTextureUsage_None": 0,
+    "WGPUTextureUsage_CopySrc": 1,
+    "WGPUTextureUsage_CopyDst": 2,
+    "WGPUTextureUsage_TextureBinding": 4,
+    "WGPUTextureUsage_StorageBinding": 8,
+    "WGPUTextureUsage_RenderAttachment": 16,
+    "WGPUTextureUsage_Force32": 2147483647
+  }
+}
