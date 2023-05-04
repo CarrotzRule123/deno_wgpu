@@ -18,6 +18,7 @@
     "GPUSize64",
     "GPUStencilValue",
     "GPUAutoLayoutMode",
+    "GPUCanvasAlphaMode",
     "GPUCompilationMessageType",
     "GPUDeviceLostReason",
     "GPUPipelineErrorReason",
@@ -125,18 +126,21 @@
   ],
   "Extra": [
     "GPUCompilationInfoRequestStatus",
-    "GPULoggingType",
-    "GPUExternalTextureRotation",
-    "GPUPipelineStatisticName",
-    "GPUTextureComponentType"
+    "GPUPipelineStatisticName"
   ],
-  "Incorrect": [
-    "GPUFeatureName"
-  ],
-  "TotalGenerated": 47,
-  "TotalMatched": 41,
-  "TotalMissing": 122,
-  "TotalExtra": 5,
-  "TotalIncorrect": 1,
+  "Incorrect": {
+    "GPUFeatureName": {
+      "pipeline-statistics-query": "extra",
+      "float32-filterable": "missing"
+    },
+    "GPUQueryType": {
+      "pipeline-statistics": "extra"
+    }
+  },
+  "TotalGenerated": 43,
+  "TotalMatched": 39,
+  "TotalMissing": 123,
+  "TotalExtra": 2,
+  "TotalIncorrect": 2,
   "Total": 164
 }

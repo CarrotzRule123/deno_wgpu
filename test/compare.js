@@ -46,11 +46,34 @@ const missing = [];
 
 const extra = [];
 
-const incorrect = [];
+const incorrect = {};
 
 for (const key in generatedKeys) {
   if (!targetKeys[key]) {
     extra.push(key);
+  } else {
+    const target = targetKeys[key];
+    const generated = generatedKeys[key];
+    if (generated.type == "TsInterfaceDeclaration") {
+      for (const node of generated.body.body) {
+        if (node.type == "TsPropertySignature") {
+          if (!target.body.body.find(n => n.key.value == node.key.value)) {
+            if (!incorrect[key]) incorrect[key] = {}
+            incorrect[key][node.key.value] = "extra";
+          }
+        }
+      }
+    }
+    if (generated.type == "TsTypeAliasDeclaration") {
+      if (generated.typeAnnotation.type == "TsUnionType") {
+        for (const node of generated.typeAnnotation.types) {
+          if (!target.typeAnnotation.types.find(n => n.literal.value == node.literal.value)) {
+            if (!incorrect[key]) incorrect[key] = {}
+            incorrect[key][node.literal.value] = "extra";
+          }
+        }
+      }
+    }
   }
 }
 
@@ -64,9 +87,8 @@ for (const key in targetKeys) {
       for (const node of target.body.body) {
         if (node.type == "TsPropertySignature") {
           if (!generated.body.body.find(n => n.key.value == node.key.value)) {
-            if (!incorrect.includes(key)) {
-              incorrect.push(key);
-            }
+            if (!incorrect[key]) incorrect[key] = {}
+            incorrect[key][node.key.value] = "missing";
           }
         }
       }
@@ -75,9 +97,8 @@ for (const key in targetKeys) {
       if (target.typeAnnotation.type == "TsUnionType") {
         for (const node of target.typeAnnotation.types) {
           if (!generated.typeAnnotation.types.find(n => n.literal.value == node.literal.value)) {
-            if (!incorrect.includes(key)) {
-              incorrect.push(key);
-            }
+            if (!incorrect[key]) incorrect[key] = {}
+            incorrect[key][node.literal.value] = "missing";
           }
         }
       }
@@ -91,10 +112,10 @@ const stats = {
   Extra: extra,
   Incorrect: incorrect,
   TotalGenerated: Object.keys(generatedKeys).length,
-  TotalMatched: Object.keys(targetKeys).length - missing.length - incorrect.length,
+  TotalMatched: Object.keys(targetKeys).length - missing.length - Object.keys(incorrect).length,
   TotalMissing: missing.length,
   TotalExtra: extra.length,
-  TotalIncorrect: incorrect.length,
+  TotalIncorrect: Object.keys(incorrect).length,
   Total: Object.keys(targetKeys).length,
 };
 

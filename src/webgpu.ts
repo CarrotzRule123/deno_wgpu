@@ -98,7 +98,6 @@ const GPUBufferMapState = { "unmapped": 0, "pending": 1, "mapped": 2 };
 export type GPUBufferUsageFlags = number;
 
 export interface GPUBufferUsage {
-  readonly NONE: GPUFlagsConstant;
   readonly MAP_READ: GPUFlagsConstant;
   readonly MAP_WRITE: GPUFlagsConstant;
   readonly COPY_SRC: GPUFlagsConstant;
@@ -114,7 +113,6 @@ export interface GPUBufferUsage {
 export type GPUColorWriteFlags = number;
 
 export interface GPUColorWrite {
-  readonly NONE: GPUFlagsConstant;
   readonly RED: GPUFlagsConstant;
   readonly GREEN: GPUFlagsConstant;
   readonly BLUE: GPUFlagsConstant;
@@ -160,14 +158,6 @@ export type GPUComputePassTimestampLocation = "beginning" | "end";
 
 const GPUComputePassTimestampLocation = { "beginning": 0, "end": 1 };
 
-export type GPUCanvasAlphaMode = "premultiplied" | "unpremultiplied" | "opaque";
-
-const GPUCanvasAlphaMode = {
-  "premultiplied": 0,
-  "unpremultiplied": 1,
-  "opaque": 2,
-};
-
 export type GPUCullMode = "none" | "front" | "back";
 
 const GPUCullMode = { "none": 0, "front": 1, "back": 2 };
@@ -176,25 +166,7 @@ export type GPUErrorFilter = "validation" | "out-of-memory" | "internal";
 
 const GPUErrorFilter = { "validation": 0, "out-of-memory": 1, "internal": 2 };
 
-export type GPULoggingType = "verbose" | "info" | "warning" | "error";
-
-const GPULoggingType = { "verbose": 0, "info": 1, "warning": 2, "error": 3 };
-
-export type GPUExternalTextureRotation =
-  | "rotate-0degrees"
-  | "rotate-90degrees"
-  | "rotate-180degrees"
-  | "rotate-270degrees";
-
-const GPUExternalTextureRotation = {
-  "rotate-0degrees": 0,
-  "rotate-90degrees": 1,
-  "rotate-180degrees": 2,
-  "rotate-270degrees": 3,
-};
-
 export type GPUFeatureName =
-  | "ndefine"
   | "depth-clip-control"
   | "depth32float-stencil8"
   | "timestamp-query"
@@ -205,19 +177,9 @@ export type GPUFeatureName =
   | "indirect-first-instance"
   | "shader-f16"
   | "rg11b10ufloat-renderable"
-  | "bgra8unorm-storage"
-  | "dawn-shader-float-16"
-  | "dawn-internal-usages"
-  | "dawn-multi-planar-formats"
-  | "dawn-native"
-  | "chromium-experimental-dp4a"
-  | "timestamp-query-inside-passes"
-  | "implicit-device-synchronization"
-  | "surface-capabilities"
-  | "transient-attachments";
+  | "bgra8unorm-storage";
 
 const GPUFeatureName = {
-  "ndefine": 0,
   "depth-clip-control": 1,
   "depth32float-stencil8": 2,
   "timestamp-query": 3,
@@ -229,15 +191,6 @@ const GPUFeatureName = {
   "shader-f16": 9,
   "rg11b10ufloat-renderable": 10,
   "bgra8unorm-storage": 11,
-  "dawn-shader-float-16": 1001,
-  "dawn-internal-usages": 1002,
-  "dawn-multi-planar-formats": 1003,
-  "dawn-native": 1004,
-  "chromium-experimental-dp4a": 1005,
-  "timestamp-query-inside-passes": 1006,
-  "implicit-device-synchronization": 1007,
-  "surface-capabilities": 1008,
-  "transient-attachments": 1009,
 };
 
 export type GPUFilterMode = "nearest" | "linear";
@@ -248,22 +201,21 @@ export type GPUFrontFace = "ccw" | "cw";
 
 const GPUFrontFace = { "ccw": 0, "cw": 1 };
 
-export type GPUIndexFormat = "ndefine" | "uint16" | "uint32";
+export type GPUIndexFormat = "uint16" | "uint32";
 
-const GPUIndexFormat = { "ndefine": 0, "uint16": 1, "uint32": 2 };
+const GPUIndexFormat = { "uint16": 1, "uint32": 2 };
 
-export type GPUVertexStepMode = "vertex" | "instance" | "ndefine";
+export type GPUVertexStepMode = "vertex" | "instance";
 
-const GPUVertexStepMode = { "vertex": 0, "instance": 1, "ndefine": 2 };
+const GPUVertexStepMode = { "vertex": 0, "instance": 1 };
 
-export type GPULoadOp = "ndefine" | "clear" | "load";
+export type GPULoadOp = "clear" | "load";
 
-const GPULoadOp = { "ndefine": 0, "clear": 1, "load": 2 };
+const GPULoadOp = { "clear": 1, "load": 2 };
 
 export type GPUMapModeFlags = number;
 
 export interface GPUMapMode {
-  readonly NONE: GPUFlagsConstant;
   readonly READ: GPUFlagsConstant;
   readonly WRITE: GPUFlagsConstant;
 }
@@ -272,9 +224,9 @@ export type GPUMipmapFilterMode = "nearest" | "linear";
 
 const GPUMipmapFilterMode = { "nearest": 0, "linear": 1 };
 
-export type GPUStoreOp = "ndefine" | "store" | "discard";
+export type GPUStoreOp = "store" | "discard";
 
-const GPUStoreOp = { "ndefine": 0, "store": 1, "discard": 2 };
+const GPUStoreOp = { "store": 1, "discard": 2 };
 
 export type GPUPipelineStatisticName =
   | "vertex-shader-invocations"
@@ -291,13 +243,9 @@ const GPUPipelineStatisticName = {
   "compute-shader-invocations": 4,
 };
 
-export type GPUPowerPreference = "ndefine" | "low-power" | "high-performance";
+export type GPUPowerPreference = "low-power" | "high-performance";
 
-const GPUPowerPreference = {
-  "ndefine": 0,
-  "low-power": 1,
-  "high-performance": 2,
-};
+const GPUPowerPreference = { "low-power": 1, "high-performance": 2 };
 
 export type GPUPrimitiveTopology =
   | "point-list"
@@ -329,7 +277,6 @@ const GPURenderPassTimestampLocation = { "beginning": 0, "end": 1 };
 export type GPUShaderStageFlags = number;
 
 export interface GPUShaderStage {
-  readonly NONE: GPUFlagsConstant;
   readonly VERTEX: GPUFlagsConstant;
   readonly FRAGMENT: GPUFlagsConstant;
   readonly COMPUTE: GPUFlagsConstant;
@@ -356,33 +303,9 @@ const GPUStencilOperation = {
   "decrement-wrap": 7,
 };
 
-export type GPUTextureAspect =
-  | "all"
-  | "stencil-only"
-  | "depth-only"
-  | "plane-0only"
-  | "plane-1only";
+export type GPUTextureAspect = "all" | "stencil-only" | "depth-only";
 
-const GPUTextureAspect = {
-  "all": 0,
-  "stencil-only": 1,
-  "depth-only": 2,
-  "plane-0only": 3,
-  "plane-1only": 4,
-};
-
-export type GPUTextureComponentType =
-  | "float"
-  | "sint"
-  | "uint"
-  | "depth-comparison";
-
-const GPUTextureComponentType = {
-  "float": 0,
-  "sint": 1,
-  "uint": 2,
-  "depth-comparison": 3,
-};
+const GPUTextureAspect = { "all": 0, "stencil-only": 1, "depth-only": 2 };
 
 export type GPUTextureDimension = "1d" | "2d" | "3d";
 
@@ -482,8 +405,7 @@ export type GPUTextureFormat =
   | "astc-12x10-unorm"
   | "astc-12x10-unorm-srgb"
   | "astc-12x12-unorm"
-  | "astc-12x12-unorm-srgb"
-  | "r8bg8biplanar-420unorm";
+  | "astc-12x12-unorm-srgb";
 
 const GPUTextureFormat = {
   "r8unorm": 1,
@@ -580,20 +502,16 @@ const GPUTextureFormat = {
   "astc-12x10-unorm-srgb": 92,
   "astc-12x12-unorm": 93,
   "astc-12x12-unorm-srgb": 94,
-  "r8bg8biplanar-420unorm": 95,
 };
 
 export type GPUTextureUsageFlags = number;
 
 export interface GPUTextureUsage {
-  readonly NONE: GPUFlagsConstant;
   readonly COPY_SRC: GPUFlagsConstant;
   readonly COPY_DST: GPUFlagsConstant;
   readonly TEXTURE_BINDING: GPUFlagsConstant;
   readonly STORAGE_BINDING: GPUFlagsConstant;
   readonly RENDER_ATTACHMENT: GPUFlagsConstant;
-  readonly PRESENT: GPUFlagsConstant;
-  readonly TRANSIENT_ATTACHMENT: GPUFlagsConstant;
 }
 
 export type GPUTextureViewDimension =

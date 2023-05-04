@@ -18,17 +18,24 @@ enum ASTType {
   Function = "function",
 }
 
+type Tagged = {
+  tags?: string[];
+};
+
 type ASTTree = { [name: string]: ASTNode };
 
 type ASTNode =
-  | TypeDef
-  | Enum
-  | Bitmask
-  | FunctionPointer
-  | Structure
-  | ObjectType
-  | Constant
-  | FunctionType;
+  & (
+    | TypeDef
+    | Enum
+    | Bitmask
+    | FunctionPointer
+    | Structure
+    | ObjectType
+    | Constant
+    | FunctionType
+  )
+  & Tagged;
 
 type RecordMember = {
   name: string;
@@ -38,20 +45,22 @@ type RecordMember = {
   optional?: boolean;
   default?: number | string;
   wire_is_data_only?: boolean;
-};
+} & Tagged;
 
 type Value = {
   name: string;
   value: number;
   jsrepr?: string;
   valid?: boolean;
-};
+
+  meta_undefined: number;
+} & Tagged;
 
 type Method = {
   name: string;
   returns: string;
   args: RecordMember[];
-};
+} & Tagged;
 
 type TypeDef = {
   category: ASTType.TypeDef;
@@ -132,11 +141,13 @@ class Emitter {
   }
 
   emitNode(label: string, node: ASTNode) {
-    switch (node.category) {
-      case ASTType.Bitmask:
-        return this.emitBitmask(label, node);
-      case ASTType.Enum:
-        return this.emitEnum(label, node);
+    if (excludeTag(node, "dawn")) {
+      switch (node.category) {
+        case ASTType.Bitmask:
+          return this.emitBitmask(label, node);
+        case ASTType.Enum:
+          return this.emitEnum(label, node);
+      }
     }
   }
 
@@ -159,7 +170,9 @@ class Emitter {
     const name = prefixGPU(pascalCase(label));
     chunks.push(`export interface ${name}{`);
     for (const value of node.values) {
-      chunks.push(`readonly ${snakeCase(value.name)}:GPUFlagsConstant;`);
+      if (isValidBitflagValue(value)) {
+        chunks.push(`readonly ${snakeCase(value.name)}:GPUFlagsConstant;`);
+      }
     }
     chunks.push(`};\n\n`);
     this.chunks.push({ name, type, chunks });
@@ -177,7 +190,7 @@ class Emitter {
       const name = prefixGPU(pascalCase(label));
       chunks.push(`export type ${name}=`);
       for (const value of node.values) {
-        if (value.valid !== false) {
+        if (isValidEnumValue(value)) {
           const member = value.jsrepr ? value.jsrepr.slice(1, -1) : value.name;
           chunks.push(`|"${enumCase(member)}"`);
         }
@@ -194,7 +207,7 @@ class Emitter {
       const name = prefixGPU(pascalCase(label));
       chunks.push(`const ${name}={`);
       for (const value of node.values) {
-        if (value.valid !== false) {
+        if (isValidEnumValue(value)) {
           const member = value.jsrepr ? value.jsrepr.slice(1, -1) : value.name;
           chunks.push(`"${enumCase(member)}": ${value.value},`);
         }
@@ -203,6 +216,20 @@ class Emitter {
       this.chunks.push({ name, type, chunks });
     }
   }
+}
+
+function excludeTag(tagged: Tagged, tag: string) {
+  return tagged.tags ? !tagged.tags.includes(tag) : true;
+}
+
+function isValidBitflagValue(value: Value) {
+  return value.valid !== false && value.name != "none" &&
+    excludeTag(value, "dawn");
+}
+
+function isValidEnumValue(value: Value) {
+  return value.valid !== false && value.jsrepr != "undefined" &&
+    excludeTag(value, "dawn");
 }
 
 function prefixGPU(str: string) {
