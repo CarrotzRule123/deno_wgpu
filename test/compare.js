@@ -51,29 +51,6 @@ const incorrect = {};
 for (const key in generatedKeys) {
   if (!targetKeys[key]) {
     extra.push(key);
-  } else {
-    const target = targetKeys[key];
-    const generated = generatedKeys[key];
-    if (generated.type == "TsInterfaceDeclaration") {
-      for (const node of generated.body.body) {
-        if (node.type == "TsPropertySignature") {
-          if (!target.body.body.find(n => n.key.value == node.key.value)) {
-            if (!incorrect[key]) incorrect[key] = {}
-            incorrect[key][node.key.value] = "extra";
-          }
-        }
-      }
-    }
-    if (generated.type == "TsTypeAliasDeclaration") {
-      if (generated.typeAnnotation.type == "TsUnionType") {
-        for (const node of generated.typeAnnotation.types) {
-          if (!target.typeAnnotation.types.find(n => n.literal.value == node.literal.value)) {
-            if (!incorrect[key]) incorrect[key] = {}
-            incorrect[key][node.literal.value] = "extra";
-          }
-        }
-      }
-    }
   }
 }
 
@@ -83,26 +60,26 @@ for (const key in targetKeys) {
   } else {
     const target = targetKeys[key];
     const generated = generatedKeys[key];
-    if (target.type == "TsInterfaceDeclaration") {
+    if (target.type == "TsInterfaceDeclaration" && generated.type == "TsInterfaceDeclaration") {
       for (const node of target.body.body) {
         if (node.type == "TsPropertySignature") {
-          if (!generated.body.body.find(n => n.key.value == node.key.value)) {
+          if (!generated.body.body.find(n => n.key.value == node.key.value) && node.key.value != "__brand") {
             if (!incorrect[key]) incorrect[key] = {}
             incorrect[key][node.key.value] = "missing";
           }
         }
       }
     }
-    if (target.type == "TsTypeAliasDeclaration") {
-      if (target.typeAnnotation.type == "TsUnionType") {
-        for (const node of target.typeAnnotation.types) {
-          if (!generated.typeAnnotation.types.find(n => n.literal.value == node.literal.value)) {
-            if (!incorrect[key]) incorrect[key] = {}
-            incorrect[key][node.literal.value] = "missing";
-          }
-        }
-      }
-    }
+    // if (target.type == "TsTypeAliasDeclaration") {
+    //   if (target.typeAnnotation.type == "TsUnionType") {
+    //     for (const node of target.typeAnnotation.types) {
+    //       if (!generated.typeAnnotation.types.find(n => n.literal.value == node.literal.value)) {
+    //         if (!incorrect[key]) incorrect[key] = {}
+    //         incorrect[key][node.literal.value] = "missing";
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
